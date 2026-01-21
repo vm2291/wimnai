@@ -14,7 +14,7 @@ const Hero = () => {
             </h1>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed opacity-0 animate-fade-in-up animation-delay-200">
               Associate Professor of Practice at NYU Abu Dhabi, passionate about
-              mathematics education, AI in learning, and empowering the next
+              mathematics education, AI in education, and empowering the next
               generation of mathematicians.
             </p>
             <div className="flex flex-wrap gap-4 opacity-0 animate-fade-in-up animation-delay-300">
@@ -40,11 +40,6 @@ const Hero = () => {
                 alt="Dr. Dania Zantout"
                 className="relative w-72 h-auto md:w-80 lg:w-96 rounded-2xl shadow-xl object-cover"
               />
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gold rounded-full flex items-center justify-center">
-                <span className="font-serif text-sm font-bold text-primary-foreground text-center leading-tight">
-                  NYU<br />Abu Dhabi
-                </span>
-              </div>
             </div>
           </div>
         </div>

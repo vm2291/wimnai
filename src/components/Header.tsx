@@ -62,7 +62,8 @@ const Header = () => {
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 {initiativesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-background rounded-lg shadow-lg border border-border py-2">
+                  <div className="absolute top-full left-0 pt-2 w-48">
+                    <div className="bg-background rounded-lg shadow-lg border border-border py-2">
                     {item.submenu.map((subItem) => (
                       <Link
                         key={subItem.label}
@@ -72,6 +73,7 @@ const Header = () => {
                         {subItem.label}
                       </Link>
                     ))}
+                    </div>
                   </div>
                 )}
               </div>

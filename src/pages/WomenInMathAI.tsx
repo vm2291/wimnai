@@ -6,6 +6,7 @@ import wimnEventImage from "@/assets/wimn-event.jpg";
 import taiDanaeBradley from "@/assets/speakers/tai-danae-bradley.jpg";
 import biancaViray from "@/assets/speakers/bianca-viray.jpg";
 import gittaKutyniok from "@/assets/speakers/gitta-kutyniok.jpg";
+import coniRojasMolinaImg from "@/assets/speakers/coni-rojas-molina.jpg";
 
 const WomenInMathAI = () => {
   const speakers = [
@@ -22,7 +23,7 @@ const WomenInMathAI = () => {
           location: "Zoom",
           abstract:
             "Separate the mathematician from the illustrator and the illustrator from the mathematician? Impossible when the two states are entangled! Coni is a mathematician and an illustrator, but how can you be two things at the same time? In this 'conference with drawings', Coni talks and draws about the creative process behind these activities, their differences and their similarities, and how one can learn from one to inspire the other. She talks about her research in the field of mathematical physics and the study of disordered quantum systems, that aims to develop rigorous mathematical theories to explain physical phenomena coming from quantum physics.",
-          image: null,
+    image: coniRojasMolinaImg,
         },
       ],
     },
@@ -157,11 +158,10 @@ const WomenInMathAI = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  WiMN+AI is a NYU Abu Dhabi initiative founded and led by Dr.
-                  Dania Zantout. It highlights the work and journeys of women
-                  mathematicians and scientists, showcases successful role
-                  models and diverse career paths in mathematics and AI, and
-                  welcomes participants of all genders.
+                  WiMN+AI is a NYU Abu Dhabi initiative that I founded to highlight 
+                  the work and journeys of women mathematicians and scientists, 
+                  showcase successful role models and diverse career paths in 
+                  mathematics and AI, and welcome participants of all genders.
                 </p>
                 <p>
                   Through its talks and community events, WiMN aims to make
@@ -169,11 +169,6 @@ const WomenInMathAI = () => {
                   campus and beyond. Now in its fourth season, the series
                   features speakers from across academia, industry, and the
                   arts.
-                </p>
-                <p className="text-gold font-medium">
-                  Recognized with the Fund for Inclusion and Innovation Award,
-                  with generous support from the Office of Global Access and
-                  Engagement.
                 </p>
               </div>
 
