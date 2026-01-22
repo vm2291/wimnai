@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="font-serif text-lg">Dr. Dania Zantout</div>
           <p className="text-sm text-primary-foreground/60">
-            © {new Date().getFullYear()} All rights reserved. NYU Abu Dhabi.
+            © {new Date().getFullYear()} All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a
