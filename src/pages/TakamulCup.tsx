@@ -97,7 +97,7 @@ const TakamulCup = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-4">
-              {universities.map(university => <div key={university} className="bg-muted/30 rounded-lg px-6 py-4 text-center font-medium text-navy border border-border">
+              {universities.map(university => <div key={university} className="bg-muted/30 rounded-lg py-4 text-center font-medium text-navy border border-border px-[50px]">
                   {university}
                 </div>)}
             </div>
