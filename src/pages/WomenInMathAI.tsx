@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Calendar, MapPin, Users } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 
 import wimnEventImage from "@/assets/wimn-event.jpg";
 import taiDanaeBradley from "@/assets/speakers/tai-danae-bradley.jpg";
@@ -106,7 +106,7 @@ const WomenInMathAI = () => {
           talkTitle:
             "His and Her Mathematical Models of Physiological Systems",
           date: "April 27, 2023",
-          location: "A3-002 (West Admin Building), NYU Abu Dhabi",
+          location: "A3-002, NYU Abu Dhabi",
           abstract:
             "Imagine someone having a heart attack. Do you visualize the dramatic Hollywood portrayal of a heart attack, in which a man collapses, grabbing his chest in agony? Even though heart disease is the leading killer of women worldwide, the misconception that heart disease is a men's disease has persisted. Dr. Layton discussed how gender biases and false impressions throughout our healthcare system lead to dangerous misconceptions. Her research program addresses this gender equity, by identifying and disseminating insights into sex differences in health and disease, using computational modeling tools.",
           image: null,
@@ -122,7 +122,7 @@ const WomenInMathAI = () => {
             "Professor of Mathematics & Director of Commonwealth Cyber Initiative, Virginia Tech",
           talkTitle: "Coding for distributed storage using algebraic geometry",
           date: "March 7, 2023",
-          location: "A3-001, NYU Abu Dhabi & Zoom",
+          location: "A3-001, NYU Abu Dhabi",
           abstract:
             "Given the astonishing rates at which data is generated, how can it be stored efficiently? How is access to the stored information guaranteed? How can it be distributed across a network while also protecting it from distortion, degradation, and loss? Dr. Matthews explored how answers to these questions may be found using algebraic geometry. She shared how studying rich underlying structures provides a window into the powerful local properties that aid in designing codes for local recovery from erasures.",
           image: null,
