@@ -2,20 +2,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Trophy, Users, Calendar, Clock, MapPin, GraduationCap, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const TakamulCup = () => {
-  const universities = [
-    "Abu Dhabi University",
-    "American University in Dubai",
-    "Middlesex University Dubai",
-    "Heriot-Watt University Dubai",
-    "UAE University",
-    "NYU Abu Dhabi",
-    "Mohamed bin Zayed University of Artificial Intelligence",
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const universities = ["Abu Dhabi University", "American University in Dubai", "Middlesex University Dubai", "Heriot-Watt University Dubai", "UAE University", "NYU Abu Dhabi", "Mohamed bin Zayed University of Artificial Intelligence"];
+  return <div className="min-h-screen bg-background">
       <Header />
 
       {/* Hero Section */}
@@ -72,8 +61,7 @@ const TakamulCup = () => {
               Battle of Mathematical Excellence
             </h2>
             <p className="text-primary-foreground/80 mb-12 max-w-xl mx-auto">
-              Join the UAE's premier integration competition where the nation's brightest 
-              mathematical minds compete in speed, accuracy, and strategic problem-solving!
+              The UAE's premier integration competition where the nation's brightest mathematical minds compete in speed, accuracy, and strategic problem-solving!
             </p>
             
             <div className="grid md:grid-cols-3 gap-8">
@@ -109,14 +97,9 @@ const TakamulCup = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-4">
-              {universities.map((university) => (
-                <div
-                  key={university}
-                  className="bg-muted/30 rounded-lg px-6 py-4 text-center font-medium text-navy border border-border"
-                >
+              {universities.map(university => <div key={university} className="bg-muted/30 rounded-lg px-6 py-4 text-center font-medium text-navy border border-border">
                   {university}
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -202,16 +185,8 @@ const TakamulCup = () => {
             <p className="text-primary-foreground/80 mb-8">
               For registration, competition details, and more information
             </p>
-            <Button
-              asChild
-              className="bg-gold text-navy hover:bg-gold/90 font-semibold"
-            >
-              <a
-                href="https://takāmulcup.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2"
-              >
+            <Button asChild className="bg-gold text-navy hover:bg-gold/90 font-semibold">
+              <a href="https://takāmulcup.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
                 Visit Website
                 <ExternalLink className="w-4 h-4" />
               </a>
@@ -221,8 +196,6 @@ const TakamulCup = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default TakamulCup;
