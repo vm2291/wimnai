@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Calendar, MapPin, ExternalLink, Users } from "lucide-react";
+import { Calendar, MapPin, Users } from "lucide-react";
 
 import wimnEventImage from "@/assets/wimn-event.jpg";
 import taiDanaeBradley from "@/assets/speakers/tai-danae-bradley.jpg";
@@ -22,8 +22,8 @@ const WomenInMathAI = () => {
           date: "November 27, 2025",
           location: "Zoom",
           abstract:
-            "Separate the mathematician from the illustrator and the illustrator from the mathematician? Impossible when the two states are entangled! Coni is a mathematician and an illustrator, but how can you be two things at the same time? In this 'conference with drawings', Coni talks and draws about the creative process behind these activities, their differences and their similarities, and how one can learn from one to inspire the other. She talks about her research in the field of mathematical physics and the study of disordered quantum systems, that aims to develop rigorous mathematical theories to explain physical phenomena coming from quantum physics.",
-    image: coniRojasMolinaImg,
+            "Separate the mathematician from the illustrator and the illustrator from the mathematician? Impossible when the two states are entangled! Coni is a mathematician and an illustrator, but how can you be two things at the same time? In this 'conference with drawings', Coni talked and drew about the creative process behind these activities, their differences and their similarities, and how one can learn from one to inspire the other. She discussed her research in the field of mathematical physics and the study of disordered quantum systems, that aims to develop rigorous mathematical theories to explain physical phenomena coming from quantum physics.",
+          image: coniRojasMolinaImg,
         },
       ],
     },
@@ -41,7 +41,7 @@ const WomenInMathAI = () => {
           date: "April 11, 2025",
           location: "Zoom",
           abstract:
-            "The new wave of artificial intelligence is impacting industry, public life, and the sciences in an unprecedented manner. However, one current major drawback is the lack of reliability as well as the enormous energy problem of AI. In this lecture we will first provide a gentle introduction into the mathematical perspective on AI. We will then showcase some highlights of mathematical foundations of reliable AI such as explainability. Finally, we will touch upon the topic of sustainable AI in the sense of energy efficiency.",
+            "The new wave of artificial intelligence is impacting industry, public life, and the sciences in an unprecedented manner. In this lecture, Prof. Kutyniok provided a gentle introduction into the mathematical perspective on AI. She showcased highlights of mathematical foundations of reliable AI such as explainability, and touched upon the topic of sustainable AI in the sense of energy efficiency.",
           image: gittaKutyniok,
           highlights: [
             "SIAM Fellow",
@@ -63,9 +63,9 @@ const WomenInMathAI = () => {
             "Craig McKibben and Sarah Merner Professor of Mathematics, University of Washington",
           talkTitle: "The interplay of geometry and arithmetic",
           date: "May 2, 2024",
-          location: "A3-001 (Screening Event)",
+          location: "A3-001, NYU Abu Dhabi",
           abstract:
-            "Unravel the mysteries of Pythagorean triples and whole number solutions at the event! Explore the fascinating equation a² + b² = c² and its infinite possibilities. Dive into unsolved puzzles like aⁿ + bⁿ = cⁿ and the rational box problem. Join us to uncover state-of-the-art discoveries and new frontiers in mathematical research.",
+            "Dr. Viray unraveled the mysteries of Pythagorean triples and whole number solutions. She explored the fascinating equation a² + b² = c² and its infinite possibilities, and discussed unsolved puzzles like aⁿ + bⁿ = cⁿ and the rational box problem, uncovering state-of-the-art discoveries and new frontiers in mathematical research.",
           image: biancaViray,
         },
         {
@@ -74,9 +74,9 @@ const WomenInMathAI = () => {
             "Research Mathematician at SandboxAQ & Visiting Research Professor at The Master's University",
           talkTitle: "When Information Theory Meets Algebra and Topology",
           date: "February 29, 2024",
-          location: "A3-001 (Screening Event)",
+          location: "A3-001, NYU Abu Dhabi",
           abstract:
-            "The goal of this talk is to give a non-technical overview of the intersect between information theory, algebra and topology, while touching upon the applications to physics. The talk will also cover Dr. Tai-Danae Bradley's career trajectory and professional success.",
+            "Dr. Bradley gave a non-technical overview of the intersect between information theory, algebra and topology, while touching upon the applications to physics. The talk also covered her career trajectory and professional success.",
           image: taiDanaeBradley,
         },
       ],
@@ -88,13 +88,16 @@ const WomenInMathAI = () => {
       events: [
         {
           name: "Dr. Hala Nelson",
-          title: "Mathematician and AI Researcher",
+          title: "Associate Professor, Department of Mathematics and Statistics, James Madison University",
           talkTitle: "A math journey that led to AI",
           date: "June 1, 2023",
           location: "Zoom",
           abstract:
-            "The talk discusses the speaker's unconventional career path in mathematics and their exploration of the underlying math behind machine learning and AI models.",
+            "Dr. Nelson described her nontraditional and nonlinear career path in math. She surveyed the math that necessarily underlies many seemingly disparate machine learning and AI models, and described her experience working with Harrisonburg City's emergency and infrastructure services. The talk unified machine learning models and natural language models under one mathematical structure, while stressing the importance of the quality of data and the downfalls of bad data.",
           image: null,
+          highlights: [
+            "Author, Essential Math For AI (O'Reilly Media)",
+          ],
         },
         {
           name: "Dr. Anita T. Layton",
@@ -103,10 +106,15 @@ const WomenInMathAI = () => {
           talkTitle:
             "His and Her Mathematical Models of Physiological Systems",
           date: "April 27, 2023",
-          location: "A3-002",
+          location: "A3-002 (West Admin Building), NYU Abu Dhabi",
           abstract:
-            "Imagine someone having a heart attack. Do you visualize the dramatic Hollywood portrayal of a heart attack, in which a man collapses, grabbing his chest in agony? Even though heart disease is the leading killer of women worldwide, the misconception that heart disease is a men's disease has persisted. A goal of our research program is to address this gender equity, by identifying and disseminating insights into sex differences in health and disease, using computational modeling tools.",
+            "Imagine someone having a heart attack. Do you visualize the dramatic Hollywood portrayal of a heart attack, in which a man collapses, grabbing his chest in agony? Even though heart disease is the leading killer of women worldwide, the misconception that heart disease is a men's disease has persisted. Dr. Layton discussed how gender biases and false impressions throughout our healthcare system lead to dangerous misconceptions. Her research program addresses this gender equity, by identifying and disseminating insights into sex differences in health and disease, using computational modeling tools.",
           image: null,
+          highlights: [
+            "Associate Dean, Research and International, Mathematics",
+            "Professor of Applied Mathematics, Computer Science, Pharmacy, and Biology",
+            "Chair, Research Equity, Diversity, and Inclusion Council",
+          ],
         },
         {
           name: "Dr. Gretchen Matthews",
@@ -114,12 +122,13 @@ const WomenInMathAI = () => {
             "Professor of Mathematics & Director of Commonwealth Cyber Initiative, Virginia Tech",
           talkTitle: "Coding for distributed storage using algebraic geometry",
           date: "March 7, 2023",
-          location: "A3-001 & Zoom",
+          location: "A3-001, NYU Abu Dhabi & Zoom",
           abstract:
-            "Given the astonishing rates at which data is generated, how can it be stored efficiently? How is access to the stored information guaranteed? How can it be distributed across a network while also protecting it from distortion, degradation, and loss? Answers to some of these questions may be found using algebraic geometry.",
+            "Given the astonishing rates at which data is generated, how can it be stored efficiently? How is access to the stored information guaranteed? How can it be distributed across a network while also protecting it from distortion, degradation, and loss? Dr. Matthews explored how answers to these questions may be found using algebraic geometry. She shared how studying rich underlying structures provides a window into the powerful local properties that aid in designing codes for local recovery from erasures.",
           image: null,
           highlights: [
             "Fellow of the Association for Women in Mathematics",
+            "Affiliated Faculty, National Security Institute",
             "Launch Event - Celebration of International Women's Day",
           ],
         },
@@ -158,33 +167,16 @@ const WomenInMathAI = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  WiMN+AI is a NYU Abu Dhabi initiative that I founded to highlight 
-                  the work and journeys of women mathematicians and scientists, 
-                  showcase successful role models and diverse career paths in 
-                  mathematics and AI, and welcome participants of all genders.
+                  WiMN+AI is a NYU Abu Dhabi initiative founded and led by Dr. Dania Zantout. 
+                  It highlights the work and journeys of women mathematicians and scientists, 
+                  showcases successful role models and diverse career paths in 
+                  mathematics and AI, and welcomes participants of all genders.
                 </p>
                 <p>
                   Through its talks and community events, WiMN aims to make
                   mathematics and AI more visible, inclusive, and vibrant on
-                  campus and beyond. Now in its fourth season, the series
-                  features speakers from across academia, industry, and the
-                  arts.
+                  campus and beyond.
                 </p>
-              </div>
-
-              <div className="mt-8 flex flex-wrap gap-4">
-                <div className="flex items-center gap-2 bg-gold/10 px-4 py-2 rounded-full">
-                  <Users className="w-4 h-4 text-gold" />
-                  <span className="text-sm font-medium text-navy">
-                    4 Seasons
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 bg-gold/10 px-4 py-2 rounded-full">
-                  <Calendar className="w-4 h-4 text-gold" />
-                  <span className="text-sm font-medium text-navy">
-                    7+ Speakers
-                  </span>
-                </div>
               </div>
             </div>
 
@@ -207,10 +199,10 @@ const WomenInMathAI = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-serif font-semibold text-navy mb-4">
-              Past & Upcoming Speakers
+              Past Speakers
             </h2>
             <p className="text-muted-foreground">
-              Distinguished women mathematicians and scientists sharing their
+              Distinguished women mathematicians and scientists who shared their
               research and journeys
             </p>
           </div>
@@ -290,19 +282,6 @@ const WomenInMathAI = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Privacy Note */}
-      <section className="py-12 bg-navy/5">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-sm text-muted-foreground italic">
-              Note: Your information will be used only for WiMN+AI event
-              organization and reporting in aggregate and will not be shared
-              outside the organizing team in identifiable form.
-            </p>
           </div>
         </div>
       </section>

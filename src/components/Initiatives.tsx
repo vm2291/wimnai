@@ -10,10 +10,10 @@ const Initiatives = () => {
       description:
         "WiMN+AI is a NYU Abu Dhabi initiative highlighting the work and journeys of women mathematicians and scientists. Now in its fourth season, it features speakers from academia, industry, and the arts.",
       highlights: [
-        "4 Seasons",
         "Distinguished Speakers",
-        "Fund for Inclusion Award",
         "Open to All Genders",
+        "Academia & Industry",
+        "Since 2023",
       ],
       link: "/women-in-math-ai",
     },
