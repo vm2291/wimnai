@@ -51,10 +51,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        glow: "hsl(var(--blue-glow))",
-        "glow-soft": "hsl(var(--blue-soft))",
-        "purple-deep": "hsl(var(--purple-deep))",
-        "purple-mid": "hsl(var(--purple-mid))",
+        glow: "hsl(var(--blue-accent))",
+        purple: "hsl(var(--purple-brand))",
+        gold: "hsl(var(--gold-accent))",
       },
       borderRadius: {
         lg: "var(--radius)",
