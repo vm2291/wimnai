@@ -1,16 +1,18 @@
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, Mail } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
-import wimnLogo from "@/assets/wimn-logo.png";
+import Navbar from "@/components/Navbar";
 import womanHistogram from "@/assets/woman-histogram.png";
 import wimnEventImage from "@/assets/wimn-event.jpg";
 import taiDanaeBradley from "@/assets/speakers/tai-danae-bradley.jpg";
 import biancaViray from "@/assets/speakers/bianca-viray.jpg";
 import gittaKutyniok from "@/assets/speakers/gitta-kutyniok.jpg";
 import coniRojasMolinaImg from "@/assets/speakers/coni-rojas-molina.jpg";
+import wimnLogo from "@/assets/wimn-logo.png";
 
 const WomenInMathAI = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
+  const [isVideoReady, setIsVideoReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const videos = ["/videos/hero-bg-1.mp4", "/videos/hero-bg-2.mp4"];
@@ -23,8 +25,16 @@ const WomenInMathAI = () => {
       setCurrentVideo((prev) => (prev + 1) % videos.length);
     };
 
+    const handleCanPlay = () => {
+      setIsVideoReady(true);
+    };
+
     video.addEventListener("ended", handleEnded);
-    return () => video.removeEventListener("ended", handleEnded);
+    video.addEventListener("canplay", handleCanPlay);
+    return () => {
+      video.removeEventListener("ended", handleEnded);
+      video.removeEventListener("canplay", handleCanPlay);
+    };
   }, []);
 
   useEffect(() => {
@@ -49,7 +59,7 @@ const WomenInMathAI = () => {
     },
     {
       name: "Prof. Dr. Gitta Kutyniok",
-      title: "Bavarian AI Chair for Mathematical Foundations of AI, LMU Munich",
+      title: "Bavarian AI Chair for Mathematical Foundations of AI, LMU Munich • SIAM Fellow • IEEE Fellow • European Academy of Sciences Member",
       talkTitle: "Reliable and Sustainable AI: From Mathematical Foundations to Next Generation AI Computing",
       date: "April 11, 2025",
       season: "Season 3",
@@ -57,7 +67,6 @@ const WomenInMathAI = () => {
       abstract:
         "The new wave of artificial intelligence is impacting industry, public life, and the sciences in an unprecedented manner. In this lecture, Prof. Kutyniok provided a gentle introduction into the mathematical perspective on AI. She showcased highlights of mathematical foundations of reliable AI such as explainability, and touched upon the topic of sustainable AI in the sense of energy efficiency.",
       image: gittaKutyniok,
-      highlights: ["SIAM Fellow", "IEEE Fellow", "European Academy of Sciences Member"],
     },
     {
       name: "Dr. Bianca Viray",
@@ -83,7 +92,7 @@ const WomenInMathAI = () => {
     },
     {
       name: "Dr. Hala Nelson",
-      title: "Associate Professor, James Madison University",
+      title: "Associate Professor, James Madison University • Author, Essential Math For AI (O'Reilly Media)",
       talkTitle: "A math journey that led to AI",
       date: "June 1, 2023",
       season: "Season 1",
@@ -91,11 +100,10 @@ const WomenInMathAI = () => {
       abstract:
         "Dr. Nelson described her nontraditional and nonlinear career path in math. She surveyed the math that necessarily underlies many seemingly disparate machine learning and AI models, and described her experience working with Harrisonburg City's emergency and infrastructure services. The talk unified machine learning models and natural language models under one mathematical structure, while stressing the importance of the quality of data and the downfalls of bad data.",
       image: null,
-      highlights: ["Author, Essential Math For AI (O'Reilly Media)"],
     },
     {
       name: "Dr. Anita T. Layton",
-      title: "Canada 150 Research Chair in Mathematical Biology and Medicine, University of Waterloo",
+      title: "Canada 150 Research Chair in Mathematical Biology and Medicine, University of Waterloo • Professor of Applied Mathematics, Computer Science, Pharmacy, and Biology",
       talkTitle: "His and Her Mathematical Models of Physiological Systems",
       date: "April 27, 2023",
       season: "Season 1",
@@ -103,34 +111,43 @@ const WomenInMathAI = () => {
       abstract:
         "Dr. Layton discussed how gender biases and false impressions throughout our healthcare system lead to dangerous misconceptions. Her research program addresses this gender equity, by identifying and disseminating insights into sex differences in health and disease, using computational modeling tools.",
       image: null,
-      highlights: ["Professor of Applied Mathematics, Computer Science, Pharmacy, and Biology"],
     },
     {
       name: "Dr. Gretchen Matthews",
-      title: "Professor of Mathematics & Director of Commonwealth Cyber Initiative, Virginia Tech",
+      title: "Professor of Mathematics & Director of Commonwealth Cyber Initiative, Virginia Tech • Fellow of the Association for Women in Mathematics",
       talkTitle: "Coding for distributed storage using algebraic geometry",
       date: "March 7, 2023",
       season: "Season 1",
       location: "NYU Abu Dhabi",
       abstract:
-        "Dr. Matthews explored how answers to questions about efficient data storage may be found using algebraic geometry. She shared how studying rich underlying structures provides a window into the powerful local properties that aid in designing codes for local recovery from erasures.",
+        "Dr. Matthews explored how answers to questions about efficient data storage may be found using algebraic geometry. She shared how studying rich underlying structures provides a window into the powerful local properties that aid in designing codes for local recovery from erasures. This was the launch event for WiMN+AI.",
       image: null,
-      highlights: ["Fellow of the Association for Women in Mathematics", "Launch Event"],
     },
   ];
 
   return (
     <div className="min-h-screen bg-background overflow-hidden">
+      <Navbar />
+
       {/* Hero Section with Video Background */}
       <section className="relative h-screen flex items-center justify-center">
         {/* Video Background */}
         <div className="absolute inset-0 overflow-hidden">
+          {/* Fallback gradient while video loads */}
+          <div 
+            className={`absolute inset-0 gradient-hero transition-opacity duration-500 ${
+              isVideoReady ? "opacity-0" : "opacity-100"
+            }`} 
+          />
           <video
             ref={videoRef}
-            className="w-full h-full object-cover"
+            className={`w-full h-full object-cover transition-opacity duration-500 ${
+              isVideoReady ? "opacity-100" : "opacity-0"
+            }`}
             autoPlay
             muted
             playsInline
+            preload="auto"
           >
             <source src={videos[currentVideo]} type="video/mp4" />
           </video>
@@ -138,15 +155,7 @@ const WomenInMathAI = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 container mx-auto px-6 text-center">
-          <div className="animate-fade-in">
-            <img
-              src={wimnLogo}
-              alt="WiMN+AI Logo"
-              className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 drop-shadow-2xl"
-            />
-          </div>
-
+        <div className="relative z-10 container mx-auto px-6 text-center pt-16">
           <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 animate-slide-up text-foreground">
             Women in Math
             <br />
@@ -156,18 +165,6 @@ const WomenInMathAI = () => {
           <p className="text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto mb-10 animate-slide-up delay-200">
             A Celebration of Diversity and Achievement
           </p>
-
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-glow/30 bg-glow/10 animate-slide-up delay-300">
-            <span className="w-2 h-2 bg-glow rounded-full animate-pulse" />
-            <span className="text-glow font-medium">NYU Abu Dhabi Initiative</span>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex items-start justify-center p-2">
-            <div className="w-1.5 h-3 bg-glow rounded-full animate-pulse" />
-          </div>
         </div>
       </section>
 
@@ -264,7 +261,7 @@ const WomenInMathAI = () => {
                     <div className="flex flex-col sm:flex-row gap-4">
                       {speaker.image && (
                         <div className="shrink-0">
-                          <div className="w-24 h-24 rounded-xl overflow-hidden ring-2 ring-glow/30 mx-auto sm:mx-0">
+                          <div className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-xl overflow-hidden ring-2 ring-glow/30 mx-auto sm:mx-0">
                             <img
                               src={speaker.image}
                               alt={speaker.name}
@@ -301,24 +298,48 @@ const WomenInMathAI = () => {
                     <p className="text-foreground/70 text-sm leading-relaxed">
                       {speaker.abstract}
                     </p>
-
-                    {speaker.highlights && (
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {speaker.highlights.map((highlight, i) => (
-                          <span
-                            key={i}
-                            className="bg-gold/15 text-gold text-xs px-3 py-1.5 rounded-full border border-gold/30"
-                          >
-                            {highlight}
-                          </span>
-                        ))}
-                      </div>
-                    )}
                   </div>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Upcoming Events Section */}
+      <section id="upcoming" className="relative z-10 py-24 px-6 gradient-hero">
+        <div className="container mx-auto text-center">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-foreground">
+            Upcoming <span className="gradient-text">Events</span>
+          </h2>
+          <p className="text-foreground/70 max-w-lg mx-auto mb-8">
+            Stay tuned for announcements about our next speakers and events.
+          </p>
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-glow/15 border border-glow/30">
+            <span className="w-2 h-2 bg-glow rounded-full animate-pulse" />
+            <span className="text-glow font-medium">New events coming soon</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="relative z-10 py-24 px-6 bg-background">
+        <div className="container mx-auto text-center">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-foreground">
+            Contact <span className="gradient-text">Us</span>
+          </h2>
+          <p className="text-foreground/70 max-w-lg mx-auto mb-8">
+            Have questions or want to get involved? Reach out to us.
+          </p>
+          <a
+            href="mailto:dz41@nyu.edu"
+            className="inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-glow/15 border border-glow/30 hover:bg-glow/25 transition-colors group"
+          >
+            <Mail className="w-5 h-5 text-glow" />
+            <span className="text-foreground font-medium group-hover:text-glow transition-colors">
+              dz41@nyu.edu
+            </span>
+          </a>
         </div>
       </section>
 
