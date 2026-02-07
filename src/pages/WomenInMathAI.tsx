@@ -9,6 +9,7 @@ import biancaViray from "@/assets/speakers/bianca-viray.jpg";
 import gittaKutyniok from "@/assets/speakers/gitta-kutyniok.jpg";
 import coniRojasMolinaImg from "@/assets/speakers/coni-rojas-molina.jpg";
 import wimnLogo from "@/assets/wimn-logo.png";
+import paperPlane from "@/assets/paper-plane.png";
 
 const WomenInMathAI = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
@@ -169,7 +170,7 @@ const WomenInMathAI = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative z-10 py-24 px-6 gradient-hero">
+      <section id="about" className="relative z-10 py-32 px-6 gradient-card">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
@@ -271,31 +272,31 @@ const WomenInMathAI = () => {
                         </div>
                       )}
                       <div className="flex-1 text-center sm:text-left">
-                        <h3 className="font-display text-lg font-semibold text-foreground mb-1">
+                        <h3 className="font-display text-xl md:text-2xl font-semibold text-foreground mb-1">
                           {speaker.name}
                         </h3>
-                        <p className="text-glow text-sm font-medium mb-2">
+                        <p className="text-glow text-lg font-medium mb-2">
                           {speaker.title}
                         </p>
                       </div>
                     </div>
 
-                    <h4 className="font-medium text-foreground/90 mt-4 mb-3 italic text-sm">
+                    <h4 className="font-medium text-foreground/90 mt-4 mb-3 italic text-xl">
                       "{speaker.talkTitle}"
                     </h4>
 
-                    <div className="flex flex-wrap gap-3 text-sm text-foreground/70 mb-3">
+                    <div className="flex flex-wrap gap-3 text-lg text-foreground/70 mb-3">
                       <span className="flex items-center gap-1.5">
-                        <Calendar className="w-4 h-4 text-glow" />
+                        <Calendar className="w-5 h-5 text-glow" />
                         {speaker.date}
                       </span>
                       <span className="flex items-center gap-1.5">
-                        <MapPin className="w-4 h-4 text-glow" />
+                        <MapPin className="w-5 h-5 text-glow" />
                         {speaker.location}
                       </span>
                     </div>
 
-                    <p className="text-foreground/70 text-sm leading-relaxed">
+                    <p className="text-foreground/70 text-lg leading-relaxed">
                       {speaker.abstract}
                     </p>
                   </div>
@@ -323,23 +324,35 @@ const WomenInMathAI = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="relative z-10 py-24 px-6 bg-background">
-        <div className="container mx-auto text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-foreground">
-            Contact <span className="gradient-text">Us</span>
-          </h2>
-          <p className="text-foreground/70 max-w-lg mx-auto mb-8">
-            Have questions or want to get involved? Reach out to us.
-          </p>
-          <a
-            href="mailto:dz41@nyu.edu"
-            className="inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-glow/15 border border-glow/30 hover:bg-glow/25 transition-colors group"
-          >
-            <Mail className="w-5 h-5 text-glow" />
-            <span className="text-foreground font-medium group-hover:text-glow transition-colors">
-              dz41@nyu.edu
-            </span>
-          </a>
+      <section id="contact" className="relative z-10 py-32 px-6 gradient-card">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                Contact <span className="gradient-text">Us</span>
+              </h2>
+              <p className="text-foreground/70 max-w-lg mb-8 text-lg">
+                Have questions or want to get involved? Reach out to us.
+              </p>
+              <a
+                href="mailto:dz41@nyu.edu"
+                className="inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-glow/15 border border-glow/30 hover:bg-glow/25 transition-colors group"
+              >
+                <Mail className="w-6 h-6 text-glow" />
+                <span className="text-foreground text-lg font-medium group-hover:text-glow transition-colors">
+                  dz41@nyu.edu
+                </span>
+              </a>
+            </div>
+            
+            <div className="flex justify-center lg:justify-end animate-float">
+              <img
+                src={paperPlane}
+                alt="Contact illustration"
+                className="w-72 h-72 md:w-96 md:h-96 object-contain drop-shadow-2xl"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
