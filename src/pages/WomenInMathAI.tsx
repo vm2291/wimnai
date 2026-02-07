@@ -2,13 +2,14 @@ import { Calendar, MapPin, Mail } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 import Navbar from "@/components/Navbar";
-import womanHistogram from "@/assets/woman-histogram.png";
 import wimnEventImage from "@/assets/wimn-event.jpg";
 import taiDanaeBradley from "@/assets/speakers/tai-danae-bradley.jpg";
 import biancaViray from "@/assets/speakers/bianca-viray.jpg";
 import gittaKutyniok from "@/assets/speakers/gitta-kutyniok.jpg";
 import coniRojasMolinaImg from "@/assets/speakers/coni-rojas-molina.jpg";
 import wimnLogo from "@/assets/wimn-logo.png";
+import paperPlane from "@/assets/paper-plane.png";
+import megaphoneGirl from "@/assets/megaphone-girl.png";
 
 const WomenInMathAI = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
@@ -204,15 +205,6 @@ const WomenInMathAI = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
               </div>
-              
-              {/* Floating illustration */}
-              <div className="absolute -bottom-12 -right-8 w-48 h-48 animate-float opacity-90">
-                <img
-                  src={womanHistogram}
-                  alt="Woman with data visualization"
-                  className="w-full h-full object-contain drop-shadow-xl"
-                />
-              </div>
             </div>
           </div>
         </div>
@@ -225,13 +217,13 @@ const WomenInMathAI = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-foreground">
               Past <span className="gradient-text">Speakers</span>
             </h2>
-            <p className="text-foreground/70 max-w-lg mx-auto">
+            <p className="text-foreground/70 max-w-lg mx-auto text-lg">
               Distinguished women mathematicians and scientists who shared their research and journeys
             </p>
           </div>
 
           {/* Timeline */}
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-5xl mx-auto">
             {/* Timeline line */}
             <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-glow via-purple to-glow/30 transform md:-translate-x-1/2" />
 
@@ -246,14 +238,14 @@ const WomenInMathAI = () => {
                 <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-glow rounded-full transform -translate-x-1/2 ring-4 ring-background shadow-lg shadow-glow/50" />
 
                 {/* Content */}
-                <div className={`ml-8 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
+                <div className={`ml-8 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
                   <div
-                    className="gradient-card rounded-2xl border border-glow/20 p-6 hover:border-glow/40 transition-all duration-300 glow-border animate-scale-in"
+                    className="gradient-card rounded-2xl border border-glow/20 p-6 md:p-8 hover:border-glow/40 transition-all duration-300 glow-border animate-scale-in"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     {/* Season badge */}
                     <div className="flex items-center gap-2 mb-4">
-                      <span className="bg-glow/20 text-glow text-xs font-semibold px-3 py-1 rounded-full">
+                      <span className="bg-glow/20 text-glow text-lg font-semibold px-3 py-1 rounded-full">
                         {speaker.season}
                       </span>
                     </div>
@@ -261,7 +253,7 @@ const WomenInMathAI = () => {
                     <div className="flex flex-col sm:flex-row gap-4">
                       {speaker.image && (
                         <div className="shrink-0">
-                          <div className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-xl overflow-hidden ring-2 ring-glow/30 mx-auto sm:mx-0">
+                          <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-xl overflow-hidden ring-2 ring-glow/30 mx-auto sm:mx-0">
                             <img
                               src={speaker.image}
                               alt={speaker.name}
@@ -271,31 +263,31 @@ const WomenInMathAI = () => {
                         </div>
                       )}
                       <div className="flex-1 text-center sm:text-left">
-                        <h3 className="font-display text-lg font-semibold text-foreground mb-1">
+                        <h3 className="font-display text-[22px] font-semibold text-foreground mb-1">
                           {speaker.name}
                         </h3>
-                        <p className="text-glow text-sm font-medium mb-2">
+                        <p className="text-glow text-lg font-medium mb-2">
                           {speaker.title}
                         </p>
                       </div>
                     </div>
 
-                    <h4 className="font-medium text-foreground/90 mt-4 mb-3 italic text-sm">
+                    <h4 className="font-medium text-foreground/90 mt-4 mb-3 italic text-lg">
                       "{speaker.talkTitle}"
                     </h4>
 
-                    <div className="flex flex-wrap gap-3 text-sm text-foreground/70 mb-3">
+                    <div className="flex flex-wrap gap-3 text-lg text-foreground/70 mb-3">
                       <span className="flex items-center gap-1.5">
-                        <Calendar className="w-4 h-4 text-glow" />
+                        <Calendar className="w-5 h-5 text-glow" />
                         {speaker.date}
                       </span>
                       <span className="flex items-center gap-1.5">
-                        <MapPin className="w-4 h-4 text-glow" />
+                        <MapPin className="w-5 h-5 text-glow" />
                         {speaker.location}
                       </span>
                     </div>
 
-                    <p className="text-foreground/70 text-sm leading-relaxed">
+                    <p className="text-foreground/70 text-lg leading-relaxed">
                       {speaker.abstract}
                     </p>
                   </div>
@@ -312,12 +304,15 @@ const WomenInMathAI = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-foreground">
             Upcoming <span className="gradient-text">Events</span>
           </h2>
-          <p className="text-foreground/70 max-w-lg mx-auto mb-8">
+          <p className="text-foreground/70 max-w-lg mx-auto mb-8 text-lg">
             Stay tuned for announcements about our next speakers and events.
           </p>
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-glow/15 border border-glow/30">
-            <span className="w-2 h-2 bg-glow rounded-full animate-pulse" />
-            <span className="text-glow font-medium">New events coming soon</span>
+          <div className="flex justify-center">
+            <img
+              src={megaphoneGirl}
+              alt="Stay tuned for announcements"
+              className="w-64 md:w-80 h-auto object-contain drop-shadow-lg"
+            />
           </div>
         </div>
       </section>
@@ -328,7 +323,7 @@ const WomenInMathAI = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-foreground">
             Contact <span className="gradient-text">Us</span>
           </h2>
-          <p className="text-foreground/70 max-w-lg mx-auto mb-8">
+          <p className="text-foreground/70 max-w-lg mx-auto mb-8 text-lg">
             Have questions or want to get involved? Reach out to us.
           </p>
           <a
@@ -336,10 +331,17 @@ const WomenInMathAI = () => {
             className="inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-glow/15 border border-glow/30 hover:bg-glow/25 transition-colors group"
           >
             <Mail className="w-5 h-5 text-glow" />
-            <span className="text-foreground font-medium group-hover:text-glow transition-colors">
+            <span className="text-foreground font-medium text-lg group-hover:text-glow transition-colors">
               dz41@nyu.edu
             </span>
           </a>
+          <div className="flex justify-center mt-10">
+            <img
+              src={paperPlane}
+              alt="Contact illustration"
+              className="w-48 md:w-64 h-auto object-contain drop-shadow-lg"
+            />
+          </div>
         </div>
       </section>
 
@@ -351,10 +353,10 @@ const WomenInMathAI = () => {
               <img src={wimnLogo} alt="WiMN+AI" className="w-12 h-12" />
               <span className="font-display text-lg font-semibold text-foreground">WiMN+AI</span>
             </div>
-            <p className="text-sm text-foreground/60">
+            <p className="text-lg text-foreground/60">
               © {new Date().getFullYear()} Women in Math + AI Nights. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 text-sm text-foreground/60">
+            <div className="flex items-center gap-2 text-lg text-foreground/60">
               <span>Organized by</span>
               <span className="text-glow font-medium">Dr. Dania Zantout</span>
             </div>
