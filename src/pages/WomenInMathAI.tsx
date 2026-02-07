@@ -7,6 +7,9 @@ import taiDanaeBradley from "@/assets/speakers/tai-danae-bradley.jpg";
 import biancaViray from "@/assets/speakers/bianca-viray.jpg";
 import gittaKutyniok from "@/assets/speakers/gitta-kutyniok.jpg";
 import coniRojasMolinaImg from "@/assets/speakers/coni-rojas-molina.jpg";
+import halaNelsonImg from "@/assets/speakers/30.png";
+import anitaLaytonImg from "@/assets/speakers/20.png";
+import gretchenMatthewsImg from "@/assets/speakers/1.png";
 import wimnLogo from "@/assets/wimn-logo.png";
 import paperPlane from "@/assets/paper-plane.png";
 import megaphoneGirl from "@/assets/megaphone-girl.png";
@@ -60,7 +63,7 @@ const WomenInMathAI = () => {
     },
     {
       name: "Prof. Dr. Gitta Kutyniok",
-      title: "Bavarian AI Chair for Mathematical Foundations of AI, LMU Munich • SIAM Fellow • IEEE Fellow • European Academy of Sciences Member",
+      title: "Bavarian AI Chair for Mathematical Foundations of AI, LMU Munich • SIAM Fellow • IEEE Fellow",
       talkTitle: "Reliable and Sustainable AI: From Mathematical Foundations to Next Generation AI Computing",
       date: "April 11, 2025",
       season: "Season 3",
@@ -100,29 +103,29 @@ const WomenInMathAI = () => {
       location: "Zoom",
       abstract:
         "Dr. Nelson described her nontraditional and nonlinear career path in math. She surveyed the math that necessarily underlies many seemingly disparate machine learning and AI models, and described her experience working with Harrisonburg City's emergency and infrastructure services. The talk unified machine learning models and natural language models under one mathematical structure, while stressing the importance of the quality of data and the downfalls of bad data.",
-      image: null,
+      image: halaNelsonImg,
     },
     {
       name: "Dr. Anita T. Layton",
-      title: "Canada 150 Research Chair in Mathematical Biology and Medicine, University of Waterloo • Professor of Applied Mathematics, Computer Science, Pharmacy, and Biology",
+      title: "Professor of Applied Mathematics, Computer Science, Pharmacy, and Biology",
       talkTitle: "His and Her Mathematical Models of Physiological Systems",
       date: "April 27, 2023",
       season: "Season 1",
       location: "NYU Abu Dhabi",
       abstract:
         "Dr. Layton discussed how gender biases and false impressions throughout our healthcare system lead to dangerous misconceptions. Her research program addresses this gender equity, by identifying and disseminating insights into sex differences in health and disease, using computational modeling tools.",
-      image: null,
+      image: anitaLaytonImg,
     },
     {
       name: "Dr. Gretchen Matthews",
-      title: "Professor of Mathematics & Director of Commonwealth Cyber Initiative, Virginia Tech • Fellow of the Association for Women in Mathematics",
+      title: "Professor of Mathematics & Director of Commonwealth Cyber Initiative, Virginia Tech",
       talkTitle: "Coding for distributed storage using algebraic geometry",
       date: "March 7, 2023",
       season: "Season 1",
       location: "NYU Abu Dhabi",
       abstract:
         "Dr. Matthews explored how answers to questions about efficient data storage may be found using algebraic geometry. She shared how studying rich underlying structures provides a window into the powerful local properties that aid in designing codes for local recovery from erasures. This was the launch event for WiMN+AI.",
-      image: null,
+      image: gretchenMatthewsImg,
     },
   ];
 
@@ -311,7 +314,7 @@ const WomenInMathAI = () => {
             <img
               src={megaphoneGirl}
               alt="Stay tuned for announcements"
-              className="w-64 md:w-80 h-auto object-contain drop-shadow-lg"
+              className="w-80 md:w-[28rem] h-auto object-contain drop-shadow-lg"
             />
           </div>
         </div>
@@ -339,7 +342,7 @@ const WomenInMathAI = () => {
             <img
               src={paperPlane}
               alt="Contact illustration"
-              className="w-48 md:w-64 h-auto object-contain drop-shadow-lg"
+              className="w-64 md:w-96 h-auto object-contain drop-shadow-lg"
             />
           </div>
         </div>
