@@ -40,15 +40,22 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
-          >
-            <img src={wimnLogo} alt="WiMN+AI" className="w-10 h-10 md:w-12 md:h-12" />
-            <span className="font-display text-lg md:text-xl font-semibold text-foreground">
-              WiMN+AI
-            </span>
-          </button>
+          <div className="flex items-center">
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <img
+                src={wimnLogo}
+                alt="WiMN+AI"
+                className="w-16 h-16 nav-logo my-2"
+                style={{ marginRight: "1.5rem" }}
+              />
+              <span className="font-display text-lg md:text-xl font-semibold text-foreground">
+                WiMN+AI
+              </span>
+            </button>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -68,7 +75,11 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden text-foreground p-2"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 

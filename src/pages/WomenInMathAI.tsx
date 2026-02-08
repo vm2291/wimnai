@@ -131,17 +131,17 @@ const WomenInMathAI = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-hidden">
-      <Navbar />
+      <Navbar logoClassName="w-12 h-12 nav-logo" />
 
       {/* Hero Section with Video Background */}
       <section className="relative h-screen flex items-center justify-center">
         {/* Video Background */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Fallback gradient while video loads */}
-          <div 
+          <div
             className={`absolute inset-0 gradient-hero transition-opacity duration-500 ${
               isVideoReady ? "opacity-0" : "opacity-100"
-            }`} 
+            }`}
           />
           <video
             ref={videoRef}
@@ -182,9 +182,9 @@ const WomenInMathAI = () => {
               </h2>
               <div className="space-y-4 text-foreground/85 leading-relaxed">
                 <p>
-                  WiMN+AI is a NYU Abu Dhabi initiative founded and led by Dr. Dania Zantout. 
-                  It highlights the work and journeys of women mathematicians and scientists, 
-                  showcases successful role models and diverse career paths in 
+                  WiMN+AI is a NYU Abu Dhabi initiative founded and led by Dr. Dania Zantout.
+                  It highlights the work and journeys of women mathematicians and scientists,
+                  showcases successful role models and diverse career paths in
                   mathematics and AI, and welcomes participants of all genders.
                 </p>
                 <p>
@@ -353,7 +353,7 @@ const WomenInMathAI = () => {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <img src={wimnLogo} alt="WiMN+AI" className="w-12 h-12" />
+              <img src={wimnLogo} alt="WiMN+AI" className="w-24 h-24 footer-logo" />
               <span className="font-display text-lg font-semibold text-foreground">WiMN+AI</span>
             </div>
             <p className="text-lg text-foreground/60">

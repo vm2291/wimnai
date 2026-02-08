@@ -11,6 +11,27 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
+/* Slightly bigger logo for nav menu */
+.nav-logo {
+  height: 10em; /* Increase as needed */
+  padding: 1.5em;
+}
+
+/* Bigger logo for footer */
+.footer-logo {
+  height: 10em; /* Increase as needed */
+  padding: 1.5em;
+}
+
+/* If logo is inside a container, ensure container allows growth:
+   Example:
+   .nav-container, .footer-container {
+     height: auto;
+     min-height: 0;
+   }
+} */
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
