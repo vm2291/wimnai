@@ -120,21 +120,21 @@ const SeriesSection = () => {
         </div>
 
         {/* 4.2 Archive */}
-        <div id="archive" className="bg-slate-50 rounded-3xl p-8 md:p-12">
-          <h3 className="font-display text-2xl font-semibold text-foreground mb-4 text-center">Archive</h3>
-          <p className="text-foreground/70 max-w-lg mx-auto text-center mb-12">
+        <div id="archive" className="bg-[#112449] rounded-3xl p-8 md:p-12">
+          <h3 className="font-display text-2xl font-semibold text-white mb-4 text-center">Archive</h3>
+          <p className="text-white/70 max-w-lg mx-auto text-center mb-12">
             Distinguished women mathematicians and scientists who shared their research and journeys
           </p>
 
           <div className="relative max-w-5xl mx-auto">
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-glow/40 transform md:-translate-x-1/2" />
+            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-white/20 transform md:-translate-x-1/2" />
 
             {allSpeakers.map((speaker, index) => (
               <div
                 key={index}
                 className={`relative flex flex-col md:flex-row gap-8 mb-16 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
               >
-                <div className="absolute left-0 md:left-1/2 top-2 w-4 h-4 bg-glow rounded-full transform -translate-x-1/2 ring-4 ring-slate-50 shadow-md z-10" />
+                <div className="absolute left-0 md:left-1/2 top-2 w-4 h-4 bg-white rounded-full transform -translate-x-1/2 ring-4 ring-[#112449] shadow-md z-10" />
 
                 <div className={`ml-10 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
                   <article
