@@ -49,10 +49,10 @@ const WhatWeDoSection = () => {
         <h3 className="font-display text-2xl font-semibold text-white mb-8 text-center">Core Goals</h3>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {coreGoals.map((goal) => (
-            <article key={goal.title} className="bg-white/5 rounded-2xl border border-white/10 p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-              <goal.icon className="w-10 h-10 text-blue-400 mb-4" aria-hidden="true" />
-              <h4 className="font-display text-xl font-semibold text-white mb-2">{goal.title}</h4>
-              <p className="text-white/70 leading-relaxed text-sm">{goal.description}</p>
+            <article key={goal.title} className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-md transition-all duration-300">
+              <goal.icon className="w-10 h-10 text-[#112449] mb-4" aria-hidden="true" />
+              <h4 className="font-display text-xl font-semibold text-[#112449] mb-2">{goal.title}</h4>
+              <p className="text-gray-600 leading-relaxed text-sm">{goal.description}</p>
             </article>
           ))}
         </div>
@@ -60,10 +60,10 @@ const WhatWeDoSection = () => {
         <h3 className="font-display text-2xl font-semibold text-white mb-8 text-center">Evolving Focus</h3>
         <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {evolvingFocus.map((item) => (
-            <article key={item.title} className="bg-white/5 rounded-2xl border border-white/10 p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
-              <item.icon className="w-10 h-10 text-blue-400 mb-4" aria-hidden="true" />
-              <h4 className="font-display text-xl font-semibold text-white mb-2">{item.title}</h4>
-              <p className="text-white/70 leading-relaxed text-sm">{item.description}</p>
+            <article key={item.title} className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-md transition-all duration-300">
+              <item.icon className="w-10 h-10 text-[#112449] mb-4" aria-hidden="true" />
+              <h4 className="font-display text-xl font-semibold text-[#112449] mb-2">{item.title}</h4>
+              <p className="text-gray-600 leading-relaxed text-sm">{item.description}</p>
             </article>
           ))}
         </div>
