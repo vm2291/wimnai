@@ -120,7 +120,7 @@ const SeriesSection = () => {
         </div>
 
         {/* 4.2 Archive */}
-        <div id="archive">
+        <div id="archive" className="bg-slate-50 rounded-3xl p-8 md:p-12">
           <h3 className="font-display text-2xl font-semibold text-foreground mb-4 text-center">Archive</h3>
           <p className="text-foreground/70 max-w-lg mx-auto text-center mb-12">
             Distinguished women mathematicians and scientists who shared their research and journeys
@@ -134,11 +134,11 @@ const SeriesSection = () => {
                 key={index}
                 className={`relative flex flex-col md:flex-row gap-8 mb-16 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
               >
-                <div className="absolute left-0 md:left-1/2 top-2 w-4 h-4 bg-glow rounded-full transform -translate-x-1/2 ring-4 ring-white shadow-md z-10" />
+                <div className="absolute left-0 md:left-1/2 top-2 w-4 h-4 bg-glow rounded-full transform -translate-x-1/2 ring-4 ring-slate-50 shadow-md z-10" />
 
                 <div className={`ml-10 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
                   <article
-                    className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 hover:border-gray-300 hover:shadow-md transition-all duration-300 shadow-sm animate-scale-in"
+                    className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300 shadow-md animate-scale-in"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <div className="flex items-center gap-2 mb-4">
