@@ -21,26 +21,27 @@
  *    Subscribers:
  *    | Timestamp | Email | Name | Affiliation | Updates | Speaker Links |
  *
- * 3. Go to Extensions → Apps Script. Delete the default code and paste:
+ * 3. Go to Extensions → Apps Script. Delete ALL existing code and paste:
  *
  * ───────── Apps Script Code (copy everything below) ─────────
  *
  * function doPost(e) {
- *   const lock = LockService.getScriptLock();
+ *   var lock = LockService.getScriptLock();
  *   lock.tryLock(10000);
  *
  *   try {
- *     const data = JSON.parse(e.postData.contents);
- *     const ss = SpreadsheetApp.getActiveSpreadsheet();
- *     const sheet = ss.getSheetByName(data.sheetName);
+ *     var sheetName = e.parameter.sheetName;
+ *     var values = JSON.parse(e.parameter.values);
+ *     var ss = SpreadsheetApp.getActiveSpreadsheet();
+ *     var sheet = ss.getSheetByName(sheetName);
  *
  *     if (!sheet) {
  *       return ContentService
- *         .createTextOutput(JSON.stringify({ result: "error", error: "Sheet not found: " + data.sheetName }))
+ *         .createTextOutput(JSON.stringify({ result: "error", error: "Sheet not found: " + sheetName }))
  *         .setMimeType(ContentService.MimeType.JSON);
  *     }
  *
- *     sheet.appendRow([new Date(), ...data.values]);
+ *     sheet.appendRow([new Date()].concat(values));
  *
  *     return ContentService
  *       .createTextOutput(JSON.stringify({ result: "success" }))
@@ -56,12 +57,10 @@
  *
  * ───────── End of Apps Script Code ─────────
  *
- * 4. Click "Deploy" → "New deployment"
- *    - Type: Web app
- *    - Execute as: Me
- *    - Who has access: Anyone
- *    - Click Deploy → Authorize access → Allow
- *    - Copy the Web app URL (looks like https://script.google.com/macros/s/ABCDEF.../exec)
+ * 4. Click "Deploy" → "Manage deployments" → edit the existing one
+ *    - Version: New version
+ *    - Click Deploy
+ *    - Copy the Web app URL
  *
  * 5. Paste that URL below as APPS_SCRIPT_URL.
  *
@@ -73,6 +72,10 @@ const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzPpDNfUG1D922F
 
 export type FormSheet = "Speakers" | "Partners" | "Subscribers";
 
+/**
+ * Submits form data via a hidden <form> + <iframe>.
+ * This avoids all CORS/redirect issues with Google Apps Script.
+ */
 export async function submitToGoogleSheet(
   sheetName: FormSheet,
   values: (string | boolean)[]
@@ -81,24 +84,49 @@ export async function submitToGoogleSheet(
     console.warn(
       "Google Sheets integration not configured. Set APPS_SCRIPT_URL in src/lib/submitForm.ts"
     );
-    // Return success so the UI still works during development
     return { success: true };
   }
 
-  try {
-    const response = await fetch(APPS_SCRIPT_URL, {
-      method: "POST",
-      body: JSON.stringify({ sheetName, values }),
-    });
+  return new Promise((resolve) => {
+    try {
+      // Create a hidden iframe to receive the form response
+      const iframeName = "sheet-submit-" + Date.now();
+      const iframe = document.createElement("iframe");
+      iframe.name = iframeName;
+      iframe.style.display = "none";
+      document.body.appendChild(iframe);
 
-    const result = await response.json();
+      // Create a hidden form
+      const form = document.createElement("form");
+      form.method = "POST";
+      form.action = APPS_SCRIPT_URL;
+      form.target = iframeName;
+      form.style.display = "none";
 
-    if (result.result === "success") {
-      return { success: true };
+      // Add hidden fields
+      const addField = (name: string, value: string) => {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = name;
+        input.value = value;
+        form.appendChild(input);
+      };
+
+      addField("sheetName", sheetName);
+      addField("values", JSON.stringify(values));
+
+      document.body.appendChild(form);
+      form.submit();
+
+      // Clean up after submission
+      setTimeout(() => {
+        document.body.removeChild(form);
+        document.body.removeChild(iframe);
+        resolve({ success: true });
+      }, 2000);
+    } catch (err) {
+      console.error("Form submission error:", err);
+      resolve({ success: false, error: String(err) });
     }
-    return { success: false, error: result.error };
-  } catch (err) {
-    console.error("Form submission error:", err);
-    return { success: false, error: String(err) };
-  }
+  });
 }
