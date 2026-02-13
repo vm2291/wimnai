@@ -1,15 +1,26 @@
 import { useState } from "react";
-import { Mail, ArrowRight } from "lucide-react";
+import { Mail, ArrowRight, Loader2 } from "lucide-react";
 import paperPlane from "@/assets/paper-plane.png";
+import { submitToGoogleSheet } from "@/lib/submitForm";
 
 const ContactSection = () => {
   const [subscribeForm, setSubscribeForm] = useState({
     email: "", name: "", affiliation: "", updates: false, speakerLinks: false,
   });
   const [subscribeSubmitted, setSubscribeSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitting(true);
+    await submitToGoogleSheet("Subscribers", [
+      subscribeForm.email,
+      subscribeForm.name,
+      subscribeForm.affiliation,
+      subscribeForm.updates,
+      subscribeForm.speakerLinks,
+    ]);
+    setSubmitting(false);
     setSubscribeSubmitted(true);
   };
 
@@ -83,8 +94,9 @@ const ContactSection = () => {
                     Send me speaker links/resources (when available)
                   </label>
                 </div>
-                <button type="submit" className="w-full px-6 py-3 rounded-lg bg-white text-[#112449] font-semibold hover:bg-white/90 transition-colors">
-                  Subscribe
+                <button type="submit" disabled={submitting} className="w-full px-6 py-3 rounded-lg bg-white text-[#112449] font-semibold hover:bg-white/90 transition-colors disabled:opacity-60 flex items-center justify-center gap-2">
+                  {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
+                  {submitting ? "Subscribing..." : "Subscribe"}
                 </button>
               </form>
             )}

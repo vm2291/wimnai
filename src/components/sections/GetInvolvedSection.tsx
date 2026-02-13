@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Mic, Handshake, ChevronRight, CheckCircle2 } from "lucide-react";
+import { Mic, Handshake, ChevronRight, CheckCircle2, Loader2 } from "lucide-react";
+import { submitToGoogleSheet } from "@/lib/submitForm";
 
 const GetInvolvedSection = () => {
   const [activeTab, setActiveTab] = useState<"speak" | "partner">("speak");
@@ -13,14 +14,36 @@ const GetInvolvedSection = () => {
   });
   const [speakerSubmitted, setSpeakerSubmitted] = useState(false);
   const [partnerSubmitted, setPartnerSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSpeakerSubmit = (e: React.FormEvent) => {
+  const handleSpeakerSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitting(true);
+    await submitToGoogleSheet("Speakers", [
+      speakerForm.fullName,
+      speakerForm.email,
+      speakerForm.affiliation,
+      speakerForm.interestType,
+      speakerForm.preferredFormat,
+      speakerForm.proposedTitle,
+      speakerForm.shortDescription,
+      speakerForm.links,
+    ]);
+    setSubmitting(false);
     setSpeakerSubmitted(true);
   };
 
-  const handlePartnerSubmit = (e: React.FormEvent) => {
+  const handlePartnerSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitting(true);
+    await submitToGoogleSheet("Partners", [
+      partnerForm.orgName,
+      partnerForm.contactName,
+      partnerForm.email,
+      partnerForm.partnershipInterest,
+      partnerForm.message,
+    ]);
+    setSubmitting(false);
     setPartnerSubmitted(true);
   };
 
@@ -183,8 +206,9 @@ const GetInvolvedSection = () => {
                       <input type="checkbox" required checked={speakerForm.agreeContact} onChange={(e) => setSpeakerForm({ ...speakerForm, agreeContact: e.target.checked })} className="w-4 h-4 rounded accent-blue-500" />
                       I agree to be contacted regarding WiMN+AI programming.
                     </label>
-                    <button type="submit" className="px-8 py-3 rounded-lg bg-white text-[#112449] font-semibold hover:bg-white/90 transition-colors shrink-0">
-                      Submit
+                    <button type="submit" disabled={submitting} className="px-8 py-3 rounded-lg bg-white text-[#112449] font-semibold hover:bg-white/90 transition-colors shrink-0 disabled:opacity-60 flex items-center gap-2">
+                      {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
+                      {submitting ? "Submitting..." : "Submit"}
                     </button>
                   </div>
                 </form>
@@ -246,8 +270,9 @@ const GetInvolvedSection = () => {
                     <textarea required className={`${inputClass} min-h-[80px]`} value={partnerForm.message} onChange={(e) => setPartnerForm({ ...partnerForm, message: e.target.value })} />
                   </div>
                   <div className="flex justify-end">
-                    <button type="submit" className="px-8 py-3 rounded-lg bg-white text-[#112449] font-semibold hover:bg-white/90 transition-colors">
-                      Submit Partnership Inquiry
+                    <button type="submit" disabled={submitting} className="px-8 py-3 rounded-lg bg-white text-[#112449] font-semibold hover:bg-white/90 transition-colors disabled:opacity-60 flex items-center gap-2">
+                      {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
+                      {submitting ? "Submitting..." : "Submit Partnership Inquiry"}
                     </button>
                   </div>
                 </form>

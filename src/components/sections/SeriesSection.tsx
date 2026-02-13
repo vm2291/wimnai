@@ -134,9 +134,9 @@ const SeriesSection = () => {
                 key={index}
                 className={`relative flex flex-col md:flex-row gap-8 mb-16 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
               >
-                <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-glow rounded-full transform -translate-x-1/2 ring-4 ring-white shadow-md" />
+                <div className="absolute left-0 md:left-1/2 top-2 w-4 h-4 bg-glow rounded-full transform -translate-x-1/2 ring-4 ring-white shadow-md z-10" />
 
-                <div className={`ml-8 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
+                <div className={`ml-10 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
                   <article
                     className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 hover:border-gray-300 hover:shadow-md transition-all duration-300 shadow-sm animate-scale-in"
                     style={{ animationDelay: `${index * 100}ms` }}
