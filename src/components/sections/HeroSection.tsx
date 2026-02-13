@@ -32,7 +32,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center">
+    <section id="home" className="relative h-screen flex items-center justify-center section-navy">
       <div className="absolute inset-0 overflow-hidden">
         <div className={`absolute inset-0 gradient-hero transition-opacity duration-500 ${isVideoReady ? "opacity-0" : "opacity-100"}`} />
         <video
@@ -58,13 +58,13 @@ const HeroSection = () => {
           Spotlighting women in mathematics and AI through talks, panels, and interdisciplinary "entanglements" — while welcoming participants of all genders.
         </p>
         <div className="flex flex-wrap justify-center gap-4 animate-slide-up delay-400">
-          <button onClick={() => scrollTo("series")} className="px-6 py-3 rounded-xl bg-glow/20 border border-glow/40 hover:bg-glow/30 transition-colors text-foreground font-medium">
+          <button onClick={() => scrollTo("series")} className="px-8 py-3 rounded-lg bg-white text-[#112449] font-semibold hover:bg-white/90 transition-colors">
             Explore the Series
           </button>
-          <button onClick={() => scrollTo("speak-panel")} className="px-6 py-3 rounded-xl bg-glow/10 border border-glow/25 hover:bg-glow/20 transition-colors text-foreground font-medium">
+          <button onClick={() => scrollTo("speak-panel")} className="px-8 py-3 rounded-lg bg-transparent border-2 border-white/40 hover:border-white/70 hover:bg-white/10 transition-all text-white font-medium">
             Speak / Panel
           </button>
-          <button onClick={() => scrollTo("partners")} className="px-6 py-3 rounded-xl bg-glow/10 border border-glow/25 hover:bg-glow/20 transition-colors text-foreground font-medium">
+          <button onClick={() => scrollTo("partners")} className="px-8 py-3 rounded-lg bg-transparent border-2 border-white/40 hover:border-white/70 hover:bg-white/10 transition-all text-white font-medium">
             Partnerships
           </button>
         </div>

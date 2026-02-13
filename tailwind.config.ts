@@ -52,7 +52,7 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         glow: "hsl(var(--blue-accent))",
-        purple: "hsl(var(--purple-brand))",
+        navy: "hsl(var(--navy))",
         gold: "hsl(var(--gold-accent))",
       },
       borderRadius: {

@@ -23,19 +23,19 @@ const WomenInMathAI = () => {
         <ContactSection />
       </main>
 
-      <footer className="relative z-10 py-12 px-6 border-t border-glow/20 gradient-hero">
+      <footer className="relative z-10 py-10 px-6 bg-[#0d1d3a] border-t border-white/5">
         <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <img src={wimnLogo} alt="WiMN+AI" className="w-24 h-24 footer-logo" />
-              <span className="font-display text-lg font-semibold text-foreground">WiMN+AI</span>
+              <img src={wimnLogo} alt="WiMN+AI" className="w-12 h-12 footer-logo" />
+              <span className="font-display text-base font-semibold text-white">WiMN+AI</span>
             </div>
-            <p className="text-lg text-foreground/60">
+            <p className="text-sm text-white/50">
               © {new Date().getFullYear()} Women in Math + AI Nights. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 text-lg text-foreground/60">
+            <div className="flex items-center gap-2 text-sm text-white/50">
               <span>Organized by</span>
-              <span className="text-glow font-medium">Dr. Dania Zantout</span>
+              <span className="text-blue-400 font-medium">Dr. Dania Zantout</span>
             </div>
           </div>
         </div>

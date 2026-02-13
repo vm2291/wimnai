@@ -87,7 +87,7 @@ const SeriesSection = () => {
   };
 
   return (
-    <section id="series" className="relative z-10 py-24 px-6 gradient-hero">
+    <section id="series" className="relative z-10 py-24 px-6 bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-foreground">
@@ -106,14 +106,14 @@ const SeriesSection = () => {
           </div>
 
           {/* Connection Nudge */}
-          <div className="max-w-2xl mx-auto gradient-card rounded-2xl border border-glow/20 p-8 text-center">
+          <div className="max-w-2xl mx-auto bg-gray-50 rounded-2xl border border-gray-200 p-8 text-center">
             <p className="text-foreground/85 mb-2">
               Want to connect after an event? Opt in to receive the speaker's shared contact/links (when available) and community updates.
             </p>
             <p className="text-foreground/70 mb-6 text-sm">
               Networking-friendly format: Many events include time for Q&A and informal conversation so participants can connect directly with speakers and each other.
             </p>
-            <button onClick={() => scrollTo("subscribe")} className="px-6 py-3 rounded-xl bg-glow/20 border border-glow/40 hover:bg-glow/30 transition-colors text-foreground font-medium">
+            <button onClick={() => scrollTo("subscribe")} className="px-6 py-3 rounded-lg bg-[#112449] text-white font-medium hover:bg-[#1a3563] transition-colors">
               Opt in for follow-ups
             </button>
           </div>
@@ -127,22 +127,22 @@ const SeriesSection = () => {
           </p>
 
           <div className="relative max-w-5xl mx-auto">
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-glow via-purple to-glow/30 transform md:-translate-x-1/2" />
+            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-glow/40 transform md:-translate-x-1/2" />
 
             {allSpeakers.map((speaker, index) => (
               <div
                 key={index}
                 className={`relative flex flex-col md:flex-row gap-8 mb-16 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
               >
-                <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-glow rounded-full transform -translate-x-1/2 ring-4 ring-background shadow-lg shadow-glow/50" />
+                <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-glow rounded-full transform -translate-x-1/2 ring-4 ring-white shadow-md" />
 
                 <div className={`ml-8 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
                   <article
-                    className="gradient-card rounded-2xl border border-glow/20 p-6 md:p-8 hover:border-glow/40 transition-all duration-300 glow-border animate-scale-in"
+                    className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 hover:border-gray-300 hover:shadow-md transition-all duration-300 shadow-sm animate-scale-in"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <div className="flex items-center gap-2 mb-4">
-                      <span className="bg-glow/20 text-glow text-lg font-semibold px-3 py-1 rounded-full">
+                      <span className="bg-blue-50 text-glow text-lg font-semibold px-3 py-1 rounded-full border border-blue-100">
                         {speaker.season}
                       </span>
                     </div>
@@ -150,7 +150,7 @@ const SeriesSection = () => {
                     <div className="flex flex-col sm:flex-row gap-4">
                       {speaker.image && (
                         <div className="shrink-0">
-                          <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-xl overflow-hidden ring-2 ring-glow/30 mx-auto sm:mx-0">
+                          <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-xl overflow-hidden ring-2 ring-gray-200 mx-auto sm:mx-0">
                             <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
                           </div>
                         </div>

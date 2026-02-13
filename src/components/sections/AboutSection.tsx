@@ -3,7 +3,7 @@ import wimnEventImage from "@/assets/wimn-event.jpg";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="relative z-10 py-24 px-6 gradient-hero">
+    <section id="about" className="relative z-10 py-24 px-6 bg-background">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="animate-fade-in">
@@ -15,7 +15,7 @@ const AboutSection = () => {
             </p>
 
             <Accordion type="single" collapsible className="space-y-4">
-              <AccordionItem value="mission" className="border border-glow/20 rounded-xl px-6 bg-card/50">
+              <AccordionItem value="mission" className="border border-gray-200 rounded-xl px-6 bg-gray-50">
                 <AccordionTrigger className="font-display text-lg font-semibold text-foreground hover:text-glow">
                   Official Mission
                 </AccordionTrigger>
@@ -35,7 +35,7 @@ const AboutSection = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="series" className="border border-glow/20 rounded-xl px-6 bg-card/50">
+              <AccordionItem value="series" className="border border-gray-200 rounded-xl px-6 bg-gray-50">
                 <AccordionTrigger className="font-display text-lg font-semibold text-foreground hover:text-glow">
                   About the Series
                 </AccordionTrigger>
@@ -53,15 +53,14 @@ const AboutSection = () => {
               </AccordionItem>
             </Accordion>
 
-            <div className="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-glow/15 border border-glow/30">
+            <div className="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-50 border border-blue-200">
               <span className="text-glow font-display font-semibold">Since 2023</span>
             </div>
           </div>
 
           <div className="relative animate-scale-in delay-200">
-            <div className="relative rounded-2xl overflow-hidden glow-border">
+            <div className="relative rounded-2xl overflow-hidden shadow-lg">
               <img src={wimnEventImage} alt="WiMN+AI community event gathering" className="w-full h-auto" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
             </div>
           </div>
         </div>
