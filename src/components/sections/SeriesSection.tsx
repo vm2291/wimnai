@@ -87,8 +87,8 @@ const SeriesSection = () => {
   };
 
   return (
-    <section id="series" className="relative z-10 py-24 px-6 bg-background">
-      <div className="container mx-auto">
+    <section id="series" className="relative z-10 py-24 px-1.5 md:px-6 bg-background">
+      <div className="container mx-auto px-2 md:px-0">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-foreground">
             The WiMN+AI <span className="gradient-text">Series</span>
@@ -141,40 +141,40 @@ const SeriesSection = () => {
                     className="bg-[#112449] rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 shadow-lg animate-scale-in"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    <div className="flex items-center gap-2 mb-4">
-                      <span className="bg-white/10 text-blue-300 font-semibold px-3 py-1 rounded-full border border-white/20">
+                    <div className="flex items-center justify-center gap-2 mb-4">
+                      <span className="bg-white/10 text-white font-semibold px-3 py-1 rounded-full border border-white/20">
                         {speaker.season}
                       </span>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="flex flex-col items-center gap-4">
                       {speaker.image && (
                         <div className="shrink-0">
-                          <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-xl overflow-hidden ring-2 ring-white/20 mx-auto sm:mx-0">
+                          <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-xl overflow-hidden ring-2 ring-white/20">
                             <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
                           </div>
                         </div>
                       )}
-                      <div className="flex-1 text-center sm:text-left">
+                      <div className="flex-1 text-center">
                         <h4 className="font-display text-[22px] font-semibold text-white mb-1">{speaker.name}</h4>
-                        <p className="text-blue-300 font-medium mb-2">{speaker.title}</p>
+                        <p className="text-white font-medium mb-2">{speaker.title}</p>
                       </div>
                     </div>
 
-                    <h5 className="font-medium text-white/90 mt-4 mb-3 italic">"{speaker.talkTitle}"</h5>
+                    <h5 className="font-medium text-white/90 mt-4 mb-3 italic text-center">"{ speaker.talkTitle}"</h5>
 
-                    <div className="flex flex-wrap gap-3 text-white/70 mb-3">
+                    <div className="flex flex-wrap gap-3 text-white/90 mb-3 justify-center">
                       <span className="flex items-center gap-1.5">
-                        <Calendar className="w-5 h-5 text-blue-300" aria-hidden="true" />
+                        <Calendar className="w-5 h-5 text-white" aria-hidden="true" />
                         {speaker.date}
                       </span>
                       <span className="flex items-center gap-1.5">
-                        <MapPin className="w-5 h-5 text-blue-300" aria-hidden="true" />
+                        <MapPin className="w-5 h-5 text-white" aria-hidden="true" />
                         {speaker.location}
                       </span>
                     </div>
 
-                    <p className="text-white/70 leading-relaxed">{speaker.abstract}</p>
+                    <p className="text-white/95 leading-relaxed text-center">{speaker.abstract}</p>
                   </article>
                 </div>
               </div>
