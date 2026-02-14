@@ -73,7 +73,16 @@
     font-family: var(--font-display);
   }
 
+  p, li, span, td, th, label, a, div {
+    font-size: inherit;
+  }
+
   p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  li {
     font-size: 17px;
     line-height: 1.7;
   }
