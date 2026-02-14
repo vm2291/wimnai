@@ -30,7 +30,7 @@ const AboutSection = () => {
                     <li><strong>Breaking Boundaries:</strong> Encourages the exploration of interdisciplinary "entanglements," such as the intersection of mathematics and illustration, to solve complex problems and broaden the definition of a scientist.</li>
                   </ul>
                   <p>
-                    Recognized with the Fund for Inclusion and Innovation Award, WiMN+AI welcomes participants of all genders to foster a community that celebrates the "spirit of diverse career paths" and pushes the boundaries of traditional research.
+                   WiMN+AI welcomes participants of all genders to foster a community that celebrates the "spirit of diverse career paths" and pushes the boundaries of traditional research.
                   </p>
                 </AccordionContent>
               </AccordionItem>
