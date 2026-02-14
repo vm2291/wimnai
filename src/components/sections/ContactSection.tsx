@@ -47,7 +47,7 @@ const ContactSection = () => {
               className="inline-flex items-center gap-3 px-6 py-4 rounded-xl bg-white/10 border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all group"
             >
               <Mail className="w-5 h-5 text-blue-400" aria-hidden="true" />
-              <span className="text-white font-medium text-lg group-hover:text-blue-300 transition-colors">
+              <span className="text-white font-medium group-hover:text-blue-300 transition-colors">
                 dz41@nyu.edu
               </span>
               <ArrowRight className="w-4 h-4 text-white/50 group-hover:text-white/80 transition-colors" />

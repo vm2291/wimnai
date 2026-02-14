@@ -142,7 +142,7 @@ const SeriesSection = () => {
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <div className="flex items-center gap-2 mb-4">
-                      <span className="bg-blue-50 text-glow text-lg font-semibold px-3 py-1 rounded-full border border-blue-100">
+                      <span className="bg-blue-50 text-glow font-semibold px-3 py-1 rounded-full border border-blue-100">
                         {speaker.season}
                       </span>
                     </div>
@@ -157,13 +157,13 @@ const SeriesSection = () => {
                       )}
                       <div className="flex-1 text-center sm:text-left">
                         <h4 className="font-display text-[22px] font-semibold text-foreground mb-1">{speaker.name}</h4>
-                        <p className="text-glow text-lg font-medium mb-2">{speaker.title}</p>
+                        <p className="text-glow font-medium mb-2">{speaker.title}</p>
                       </div>
                     </div>
 
-                    <h5 className="font-medium text-foreground/90 mt-4 mb-3 italic text-lg">"{speaker.talkTitle}"</h5>
+                    <h5 className="font-medium text-foreground/90 mt-4 mb-3 italic">"{speaker.talkTitle}"</h5>
 
-                    <div className="flex flex-wrap gap-3 text-lg text-foreground/70 mb-3">
+                    <div className="flex flex-wrap gap-3 text-foreground/70 mb-3">
                       <span className="flex items-center gap-1.5">
                         <Calendar className="w-5 h-5 text-glow" aria-hidden="true" />
                         {speaker.date}
@@ -174,7 +174,7 @@ const SeriesSection = () => {
                       </span>
                     </div>
 
-                    <p className="text-foreground/70 text-lg leading-relaxed">{speaker.abstract}</p>
+                    <p className="text-foreground/70 leading-relaxed">{speaker.abstract}</p>
                   </article>
                 </div>
               </div>
