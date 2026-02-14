@@ -28,7 +28,8 @@
     --accent-foreground: 0 0% 100%;
 
     --navy: 220 62% 18%;
-    --blue-accent: 220 72% 70%;
+    /* --blue-accent: 220 72% 70%; */
+    --blue-accent: 221 70% 44%; /* #2154c2 */
     --gold-accent: 45 100% 55%;
 
     --destructive: 0 84.2% 60.2%;
@@ -102,7 +103,7 @@
   }
 
   .text-glow {
-    color: hsl(var(--blue-accent));
+    color: #2154c2;
   }
 
   .bg-glow {
@@ -122,7 +123,7 @@
   }
 
   .gradient-text {
-    color: hsl(var(--blue-accent));
+    color: #2154c2;
   }
 
   .glow-border {
