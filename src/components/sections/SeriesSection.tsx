@@ -136,7 +136,7 @@ const SeriesSection = () => {
               >
                 <div className="absolute left-0 md:left-1/2 top-2 w-4 h-4 bg-[#112449] rounded-full transform -translate-x-1/2 ring-4 ring-white shadow-md z-10" />
 
-                <div className={`ml-10 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
+                <div className={`ml-7 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
                   <article
                     className="bg-[#112449] rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 shadow-lg animate-scale-in"
                     style={{ animationDelay: `${index * 100}ms` }}
