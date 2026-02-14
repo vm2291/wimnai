@@ -161,9 +161,9 @@ const SeriesSection = () => {
                       </div>
                     </div>
 
-                    <h5 className="font-medium text-white/90 mt-4 mb-3 italic">"{speaker.talkTitle}"</h5>
+                    <h5 className="font-medium text-white mt-4 mb-3 italic">"{speaker.talkTitle}"</h5>
 
-                    <div className="flex flex-wrap gap-3 text-white/90 mb-3">
+                    <div className="flex flex-wrap gap-3 text-white mb-3">
                       <span className="flex items-center gap-1.5">
                         <Calendar className="w-5 h-5 text-white" aria-hidden="true" />
                         {speaker.date}
@@ -174,7 +174,7 @@ const SeriesSection = () => {
                       </span>
                     </div>
 
-                    <p className="text-white/95 leading-relaxed">{speaker.abstract}</p>
+                    <p className="text-white leading-relaxed">{speaker.abstract}</p>
                   </article>
                 </div>
               </div>
