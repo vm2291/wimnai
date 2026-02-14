@@ -9,12 +9,12 @@ const coreGoals = [
   {
     icon: Users,
     title: "Building Community",
-    description: 'Ensure women in these fields feel welcomed, supported, and inspired — not isolated as "tokens" or "solos."',
+    description: 'Ensure women in these fields feel welcomed, supported, and inspired, not isolated as "tokens" or "solos."',
   },
   {
     icon: BookOpen,
     title: "Story + Scholarship",
-    description: "We humanize the mathematician's path through personal narrative while celebrating rigorous ideas — so students can see both the person and the work.",
+    description: "We humanize the mathematician's path through personal narrative while celebrating rigorous ideas, so students can see both the person and the work.",
   },
   {
     icon: Sparkles,
@@ -27,7 +27,7 @@ const evolvingFocus = [
   {
     icon: GraduationCap,
     title: "Bridging Academia, Education, and Industry",
-    description: "Convene talks and panels — including partner conversations — that connect AI education and curriculum with evolving industry practice and societal needs.",
+    description: "Convene talks and panels including partner conversations that connect AI education and curriculum with evolving industry practice and societal needs.",
   },
   {
     icon: Handshake,

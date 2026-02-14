@@ -55,7 +55,7 @@ const HeroSection = () => {
           A Celebration of Diversity and Achievement
         </p>
         <p className="text-foreground/75 max-w-2xl mx-auto mb-10 animate-slide-up delay-300">
-          Spotlighting women in mathematics and AI through talks, panels, and interdisciplinary "entanglements" — while welcoming participants of all genders.
+          Spotlighting women in mathematics and AI through talks, panels, and interdisciplinary "entanglements" while welcoming participants of all genders.
         </p>
         <div className="flex flex-wrap justify-center gap-4 animate-slide-up delay-400">
           <button onClick={() => scrollTo("series")} className="px-8 py-3 rounded-lg bg-white text-[#112449] font-semibold hover:bg-white/90 transition-colors">

@@ -11,7 +11,7 @@ const AboutSection = () => {
               About <span className="gradient-text">WiMN+AI</span>
             </h2>
             <p className="text-foreground/85 leading-relaxed mb-8">
-              WiMN+AI (Women in Math Nights plus AI) is a NYU Abu Dhabi initiative founded by Dr. Dania Zantout to make mathematics and artificial intelligence more visible, inclusive, and vibrant — on campus and beyond.
+              WiMN+AI (Women in Math Nights plus AI) is a NYU Abu Dhabi initiative founded by Dr. Dania Zantout to make mathematics and artificial intelligence more visible, inclusive, and vibrant on campus and beyond.
             </p>
 
             <Accordion type="single" collapsible className="space-y-4">
