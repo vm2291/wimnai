@@ -141,7 +141,7 @@ const SeriesSection = () => {
                     className="bg-[#112449] rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 shadow-lg animate-scale-in"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    <div className="flex items-center gap-2 mb-4">
+                    <div className="flex justify-center md:justify-start items-center gap-2 mb-4">
                       <span className="bg-white/10 text-white font-semibold px-3 py-1 rounded-full border border-white/20">
                         {speaker.season}
                       </span>
