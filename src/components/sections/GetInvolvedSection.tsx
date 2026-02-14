@@ -47,8 +47,8 @@ const GetInvolvedSection = () => {
     setPartnerSubmitted(true);
   };
 
-  const inputClass = "w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-foreground placeholder:text-white/40 focus:outline-none focus:border-white/50 focus:bg-white/15 transition-all";
-  const labelClass = "block text-foreground/90 font-medium mb-1.5 text-sm";
+  const inputClass = "w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-white/50 focus:bg-white/15 transition-all";
+  const labelClass = "block text-white font-medium mb-1.5 text-sm";
 
   const speakerInterests = [
     "The mathematics behind AI, and the people shaping it",
@@ -72,7 +72,7 @@ const GetInvolvedSection = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-3 text-white">
             Get Involved
           </h2>
-          <p className="text-white/70 max-w-lg mx-auto">
+          <p className="text-white max-w-lg mx-auto" style={{ fontSize: '17px' }}>
             Whether you want to share your work or build partnerships, we'd love to hear from you.
           </p>
         </div>
@@ -97,7 +97,7 @@ const GetInvolvedSection = () => {
                   Be Featured
                   <ChevronRight className={`w-4 h-4 transition-transform ${activeTab === "speak" ? "rotate-90" : ""}`} />
                 </h3>
-                <p className="text-white/70 text-sm leading-relaxed">
+                <p className="text-white leading-relaxed" style={{ fontSize: '17px' }}>
                   Are you a woman working in mathematics, AI, or at their intersection? Share your work through a talk, fireside chat, or panel.
                 </p>
               </div>
@@ -122,7 +122,7 @@ const GetInvolvedSection = () => {
                   Partner With Us
                   <ChevronRight className={`w-4 h-4 transition-transform ${activeTab === "partner" ? "rotate-90" : ""}`} />
                 </h3>
-                <p className="text-white/70 text-sm leading-relaxed">
+                <p className="text-white leading-relaxed" style={{ fontSize: '17px' }}>
                   Collaborate with WiMN+AI to strengthen the ecosystem around mathematics and AI.
                 </p>
               </div>
@@ -136,10 +136,10 @@ const GetInvolvedSection = () => {
             <div className="animate-fade-in">
               {/* Interest bullets */}
               <div className="mb-8 p-5 rounded-xl bg-white/5 border border-white/10">
-                <p className="text-white/80 text-sm font-medium mb-3">We're especially interested in:</p>
+                <p className="text-white font-medium mb-3" style={{ fontSize: '17px' }}>We're especially interested in:</p>
                 <div className="grid sm:grid-cols-2 gap-2">
                   {speakerInterests.map((item, i) => (
-                    <div key={i} className="flex items-start gap-2 text-white/70 text-sm">
+                    <div key={i} className="flex items-start gap-2 text-white" style={{ fontSize: '17px' }}>
                       <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </div>
@@ -202,7 +202,7 @@ const GetInvolvedSection = () => {
                     <textarea required className={`${inputClass} min-h-[80px]`} value={speakerForm.shortDescription} onChange={(e) => setSpeakerForm({ ...speakerForm, shortDescription: e.target.value })} />
                   </div>
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <label className="flex items-center gap-2.5 text-white/70 cursor-pointer text-sm">
+                    <label className="flex items-center gap-2.5 text-white cursor-pointer text-sm">
                       <input type="checkbox" required checked={speakerForm.agreeContact} onChange={(e) => setSpeakerForm({ ...speakerForm, agreeContact: e.target.checked })} className="w-4 h-4 rounded accent-blue-500" />
                       I agree to be contacted regarding WiMN+AI programming.
                     </label>
@@ -220,10 +220,10 @@ const GetInvolvedSection = () => {
             <div className="animate-fade-in">
               {/* Partner ways */}
               <div className="mb-8 p-5 rounded-xl bg-white/5 border border-white/10">
-                <p className="text-white/80 text-sm font-medium mb-3">Ways to partner:</p>
+                <p className="text-white font-medium mb-3" style={{ fontSize: '17px' }}>Ways to partner:</p>
                 <div className="grid sm:grid-cols-2 gap-2">
                   {partnerWays.map((item, i) => (
-                    <div key={i} className="flex items-start gap-2 text-white/70 text-sm">
+                    <div key={i} className="flex items-start gap-2 text-white" style={{ fontSize: '17px' }}>
                       <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </div>
