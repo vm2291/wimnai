@@ -16,9 +16,9 @@ const AboutSection = () => {
 
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="mission" className="border border-gray-200 rounded-xl px-6 bg-gray-50">
-                <AccordionTrigger className="font-display text-lg font-semibold text-foreground hover:text-glow">
-                  Official Mission
-                </AccordionTrigger>
+                 <AccordionTrigger className="font-display font-semibold text-foreground hover:text-glow">
+                   Official Mission
+                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/80 leading-relaxed space-y-4">
                   <p>
                     The mission of WiMN+AI is to transform the landscape of STEM by making mathematics and artificial intelligence more visible, inclusive, and vibrant both on campus and beyond. Founded at NYU Abu Dhabi by Dr. Dania Zantout, this initiative specifically addresses the challenge of women in STEM frequently finding themselves as "tokens" or "solos" within their departments.
@@ -36,9 +36,9 @@ const AboutSection = () => {
               </AccordionItem>
 
               <AccordionItem value="series" className="border border-gray-200 rounded-xl px-6 bg-gray-50">
-                <AccordionTrigger className="font-display text-lg font-semibold text-foreground hover:text-glow">
-                  About the Series
-                </AccordionTrigger>
+                 <AccordionTrigger className="font-display font-semibold text-foreground hover:text-glow">
+                   About the Series
+                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/80 leading-relaxed space-y-4">
                   <p>
                     WiMN+AI is a NYU Abu Dhabi initiative founded by Dr. Dania Zantout to highlight the work and journeys of women mathematicians and scientists. It showcases successful role models and diverse career paths in mathematics and AI, and welcomes participants of all genders.
