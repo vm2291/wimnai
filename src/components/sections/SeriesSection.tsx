@@ -120,29 +120,29 @@ const SeriesSection = () => {
         </div>
 
         {/* 4.2 Archive */}
-        <div id="archive" className="bg-[#112449] rounded-3xl p-8 md:p-12">
-          <h3 className="font-display text-2xl font-semibold text-white mb-4 text-center">Archive</h3>
-          <p className="text-white/70 max-w-lg mx-auto text-center mb-12">
+        <div id="archive">
+          <h3 className="font-display text-2xl font-semibold text-foreground mb-4 text-center">Archive</h3>
+          <p className="text-foreground/70 max-w-lg mx-auto text-center mb-12">
             Distinguished women mathematicians and scientists who shared their research and journeys
           </p>
 
           <div className="relative max-w-5xl mx-auto">
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-white/20 transform md:-translate-x-1/2" />
+            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-[#112449]/20 transform md:-translate-x-1/2" />
 
             {allSpeakers.map((speaker, index) => (
               <div
                 key={index}
                 className={`relative flex flex-col md:flex-row gap-8 mb-16 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
               >
-                <div className="absolute left-0 md:left-1/2 top-2 w-4 h-4 bg-white rounded-full transform -translate-x-1/2 ring-4 ring-[#112449] shadow-md z-10" />
+                <div className="absolute left-0 md:left-1/2 top-2 w-4 h-4 bg-[#112449] rounded-full transform -translate-x-1/2 ring-4 ring-white shadow-md z-10" />
 
                 <div className={`ml-10 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
                   <article
-                    className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 hover:border-gray-300 hover:shadow-lg transition-all duration-300 shadow-md animate-scale-in"
+                    className="bg-[#112449] rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 shadow-lg animate-scale-in"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <div className="flex items-center gap-2 mb-4">
-                      <span className="bg-blue-50 text-glow font-semibold px-3 py-1 rounded-full border border-blue-100">
+                      <span className="bg-white/10 text-blue-300 font-semibold px-3 py-1 rounded-full border border-white/20">
                         {speaker.season}
                       </span>
                     </div>
@@ -150,31 +150,31 @@ const SeriesSection = () => {
                     <div className="flex flex-col sm:flex-row gap-4">
                       {speaker.image && (
                         <div className="shrink-0">
-                          <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-xl overflow-hidden ring-2 ring-gray-200 mx-auto sm:mx-0">
+                          <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-xl overflow-hidden ring-2 ring-white/20 mx-auto sm:mx-0">
                             <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
                           </div>
                         </div>
                       )}
                       <div className="flex-1 text-center sm:text-left">
-                        <h4 className="font-display text-[22px] font-semibold text-foreground mb-1">{speaker.name}</h4>
-                        <p className="text-glow font-medium mb-2">{speaker.title}</p>
+                        <h4 className="font-display text-[22px] font-semibold text-white mb-1">{speaker.name}</h4>
+                        <p className="text-blue-300 font-medium mb-2">{speaker.title}</p>
                       </div>
                     </div>
 
-                    <h5 className="font-medium text-foreground/90 mt-4 mb-3 italic">"{speaker.talkTitle}"</h5>
+                    <h5 className="font-medium text-white/90 mt-4 mb-3 italic">"{speaker.talkTitle}"</h5>
 
-                    <div className="flex flex-wrap gap-3 text-foreground/70 mb-3">
+                    <div className="flex flex-wrap gap-3 text-white/70 mb-3">
                       <span className="flex items-center gap-1.5">
-                        <Calendar className="w-5 h-5 text-glow" aria-hidden="true" />
+                        <Calendar className="w-5 h-5 text-blue-300" aria-hidden="true" />
                         {speaker.date}
                       </span>
                       <span className="flex items-center gap-1.5">
-                        <MapPin className="w-5 h-5 text-glow" aria-hidden="true" />
+                        <MapPin className="w-5 h-5 text-blue-300" aria-hidden="true" />
                         {speaker.location}
                       </span>
                     </div>
 
-                    <p className="text-foreground/70 leading-relaxed">{speaker.abstract}</p>
+                    <p className="text-white/70 leading-relaxed">{speaker.abstract}</p>
                   </article>
                 </div>
               </div>
