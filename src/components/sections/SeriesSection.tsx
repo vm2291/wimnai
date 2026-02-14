@@ -120,9 +120,15 @@ const SeriesSection = () => {
         </div>
 
         {/* 4.2 Archive */}
+<<<<<<< Updated upstream
         <div id="archive">
           <h3 className="font-display text-2xl font-semibold text-foreground mb-4 text-center">Archive</h3>
           <p className="text-foreground/70 max-w-lg mx-auto text-center mb-12">
+=======
+        <div id="archive" className="bg-[#112449] rounded-3xl p-8 md:p-12">
+          <h3 className="font-display text-2xl font-semibold text-white mb-4 text-center">Archive</h3>
+          <p className="text-white/90 max-w-lg mx-auto text-center mb-12">
+>>>>>>> Stashed changes
             Distinguished women mathematicians and scientists who shared their research and journeys
           </p>
 
