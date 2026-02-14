@@ -49,7 +49,7 @@ const HeroSection = () => {
         <h1 className="font-display text-5xl md:text-7xl font-bold mb-4 animate-slide-up text-foreground">
           Women in Math
           <br />
-          <span className="gradient-text glow-text">+ AI Nights</span>
+          <span className="text-foreground">+ AI Nights</span>
         </h1>
         <p className="text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto mb-4 animate-slide-up delay-200">
           A Celebration of Diversity and Achievement
