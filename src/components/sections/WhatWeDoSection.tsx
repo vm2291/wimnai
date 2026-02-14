@@ -52,7 +52,7 @@ const WhatWeDoSection = () => {
             <article key={goal.title} className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-md transition-all duration-300">
               <goal.icon className="w-10 h-10 text-[#112449] mb-4" aria-hidden="true" />
               <h4 className="font-display text-xl font-semibold text-[#112449] mb-2">{goal.title}</h4>
-              <p className="text-gray-600 leading-relaxed text-sm">{goal.description}</p>
+              <p className="text-gray-600 leading-relaxed">{goal.description}</p>
             </article>
           ))}
         </div>
@@ -63,7 +63,7 @@ const WhatWeDoSection = () => {
             <article key={item.title} className="bg-white rounded-2xl border border-gray-100 p-6 hover:shadow-md transition-all duration-300">
               <item.icon className="w-10 h-10 text-[#112449] mb-4" aria-hidden="true" />
               <h4 className="font-display text-xl font-semibold text-[#112449] mb-2">{item.title}</h4>
-              <p className="text-gray-600 leading-relaxed text-sm">{item.description}</p>
+              <p className="text-gray-600 leading-relaxed">{item.description}</p>
             </article>
           ))}
         </div>

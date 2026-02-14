@@ -110,7 +110,7 @@ const SeriesSection = () => {
             <p className="text-foreground/85 mb-2">
               Want to connect after an event? Opt in to receive the speaker's shared contact/links (when available) and community updates.
             </p>
-            <p className="text-foreground/70 mb-6 text-sm">
+            <p className="text-foreground/70 mb-6">
               Networking-friendly format: Many events include time for Q&A and informal conversation so participants can connect directly with speakers and each other.
             </p>
             <button onClick={() => scrollTo("subscribe")} className="px-6 py-3 rounded-lg bg-[#112449] text-white font-medium hover:bg-[#1a3563] transition-colors">
