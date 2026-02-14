@@ -120,15 +120,9 @@ const SeriesSection = () => {
         </div>
 
         {/* 4.2 Archive */}
-<<<<<<< Updated upstream
         <div id="archive">
           <h3 className="font-display text-2xl font-semibold text-foreground mb-4 text-center">Archive</h3>
           <p className="text-foreground/70 max-w-lg mx-auto text-center mb-12">
-=======
-        <div id="archive" className="bg-[#112449] rounded-3xl p-8 md:p-12">
-          <h3 className="font-display text-2xl font-semibold text-white mb-4 text-center">Archive</h3>
-          <p className="text-white/90 max-w-lg mx-auto text-center mb-12">
->>>>>>> Stashed changes
             Distinguished women mathematicians and scientists who shared their research and journeys
           </p>
 
@@ -147,29 +141,29 @@ const SeriesSection = () => {
                     className="bg-[#112449] rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 shadow-lg animate-scale-in"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    <div className="flex items-center justify-center gap-2 mb-4">
+                    <div className="flex items-center gap-2 mb-4">
                       <span className="bg-white/10 text-white font-semibold px-3 py-1 rounded-full border border-white/20">
                         {speaker.season}
                       </span>
                     </div>
 
-                    <div className="flex flex-col items-center gap-4">
+                    <div className="flex flex-col sm:flex-row gap-4">
                       {speaker.image && (
                         <div className="shrink-0">
-                          <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-xl overflow-hidden ring-2 ring-white/20">
+                          <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 rounded-xl overflow-hidden ring-2 ring-white/20 mx-auto sm:mx-0">
                             <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
                           </div>
                         </div>
                       )}
-                      <div className="flex-1 text-center">
+                      <div className="flex-1 text-center sm:text-left">
                         <h4 className="font-display text-[22px] font-semibold text-white mb-1">{speaker.name}</h4>
                         <p className="text-white font-medium mb-2">{speaker.title}</p>
                       </div>
                     </div>
 
-                    <h5 className="font-medium text-white/90 mt-4 mb-3 italic text-center">"{ speaker.talkTitle}"</h5>
+                    <h5 className="font-medium text-white/90 mt-4 mb-3 italic">"{speaker.talkTitle}"</h5>
 
-                    <div className="flex flex-wrap gap-3 text-white/90 mb-3 justify-center">
+                    <div className="flex flex-wrap gap-3 text-white/90 mb-3">
                       <span className="flex items-center gap-1.5">
                         <Calendar className="w-5 h-5 text-white" aria-hidden="true" />
                         {speaker.date}
@@ -180,7 +174,7 @@ const SeriesSection = () => {
                       </span>
                     </div>
 
-                    <p className="text-white/95 leading-relaxed text-center">{speaker.abstract}</p>
+                    <p className="text-white/95 leading-relaxed">{speaker.abstract}</p>
                   </article>
                 </div>
               </div>
