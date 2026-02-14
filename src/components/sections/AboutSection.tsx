@@ -44,11 +44,9 @@ const AboutSection = () => {
                     WiMN+AI is a NYU Abu Dhabi initiative founded by Dr. Dania Zantout to highlight the work and journeys of women mathematicians and scientists. It showcases successful role models and diverse career paths in mathematics and AI, and welcomes participants of all genders.
                   </p>
                   <p>
-                    Through its talks and community events, WiMN+AI aims to make mathematics and AI more visible, inclusive, and vibrant on campus and beyond. The literature shows that women in STEM often find themselves as 'tokens' or 'solos' in their departments. WiMN+AI acknowledges this challenge and serves as a program to ensure women in mathematics feel welcomed, supported, and inspired.
+                    Through its talks and community events, WiMN+AI aims to make mathematics and AI more visible, inclusive, and vibrant on campus and beyond. The literature shows that women in STEM often find themselves as 'tokens' or 'solos' in their departments. WiMN+AI acknowledges this challenge and serves as a program to ensure women in mathematics feel welcomed, supported, and inspired. Now in its fourth season, the series features speakers from across academia, industry, and the arts.
                   </p>
-                  <p>
-                    Now in its fourth season, the series features speakers from across academia, industry, and the arts, and has been recognized with the Fund for Inclusion and Innovation Award, with generous support from the Office of Global Access and Engagement (January 2023–December 2025). Starting January 2026, WiMN+AI receives support from the Center of Interdisciplinary Data Science and AI (CIDSAI).
-                  </p>
+                
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
