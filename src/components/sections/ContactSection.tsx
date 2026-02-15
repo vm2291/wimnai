@@ -34,7 +34,7 @@ const ContactSection = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-white">
             Contact Us
           </h2>
-          <p className="text-white/70 max-w-lg mx-auto">
+          <p className="text-white max-w-lg mx-auto">
             For speaking, panels, partnerships, or general inquiries, please reach out.
           </p>
         </div>
@@ -60,7 +60,7 @@ const ContactSection = () => {
           {/* Right: Subscribe Form */}
           <div id="subscribe">
             <h3 className="font-display text-2xl font-semibold text-white mb-2">Stay Connected</h3>
-            <p className="text-white/60 mb-6 text-sm">
+            <p className="text-white mb-6 text-sm">
               Opt in for WiMN+AI updates and post-event speaker links/resources (when shared).
             </p>
 
