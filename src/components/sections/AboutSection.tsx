@@ -11,7 +11,7 @@ const AboutSection = () => {
               About <span className="gradient-text">WiMN+AI</span>
             </h2>
             <p className="text-foreground/85 leading-relaxed mb-8">
-              WiMN+AI (Women in Math Nights plus AI) is a NYU Abu Dhabi initiative founded by Dr. Dania Zantout to make mathematics and artificial intelligence more visible, inclusive, and vibrant on campus and beyond.
+              WiMN+AI (Women in Math + AI Nights) is a series founded and led by Dr. Dania Zantout at NYU Abu Dhabi to make mathematics and artificial intelligence more visible, accessible, and vibrant on campus and beyond.
             </p>
 
             <Accordion type="single" collapsible className="space-y-4">
@@ -21,16 +21,16 @@ const AboutSection = () => {
                  </AccordionTrigger>
                 <AccordionContent className="text-foreground/80 leading-relaxed space-y-4">
                   <p>
-                    The mission of WiMN+AI is to transform the landscape of STEM by making mathematics and artificial intelligence more visible, inclusive, and vibrant both on campus and beyond. Founded at NYU Abu Dhabi by Dr. Dania Zantout, this initiative specifically addresses the challenge of women in STEM frequently finding themselves as "tokens" or "solos" within their departments.
+                    The mission of WiMN+AI is to transform the landscape of STEM by making mathematics and artificial intelligence more visible, accessible, and vibrant. Founded and led by Dr. Dania Zantout at NYU Abu Dhabi, the series responds to a well-documented challenge: women in STEM often find themselves as "tokens" or "solos" within their departments.
                   </p>
-                  <p>To combat this isolation, the program is dedicated to several core goals:</p>
+                  <p>To counter this isolation, WiMN+AI is dedicated to three core goals:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li><strong>Showcasing Role Models:</strong> Highlights the diverse journeys and successful career paths of women mathematicians and scientists from academia, industry, and the arts.</li>
-                    <li><strong>Building Community:</strong> Serves as a platform to ensure women in these fields feel welcomed, supported, and inspired, rather than isolated.</li>
-                    <li><strong>Breaking Boundaries:</strong> Encourages the exploration of interdisciplinary "entanglements," such as the intersection of mathematics and illustration, to solve complex problems and broaden the definition of a scientist.</li>
+                    <li><strong>Showcasing Role Models:</strong> Spotlighting diverse journeys and successful career paths of women mathematicians and scientists across academia, industry, and the arts.</li>
+                    <li><strong>Building Community:</strong> Creating spaces where women in these fields feel welcomed, supported, and inspired rather than isolated.</li>
+                    <li><strong>Breaking Boundaries:</strong> Exploring interdisciplinary "entanglements," such as mathematics and illustration, to broaden the definition of a scientist and open new ways to solve complex problems.</li>
                   </ul>
                   <p>
-                   WiMN+AI welcomes participants of all genders to foster a community that celebrates the "spirit of diverse career paths" and pushes the boundaries of traditional research.
+                    WiMN+AI welcomes participants of all genders to foster a community that celebrates diverse career paths and pushes the boundaries of traditional research culture. WiMN+AI is designed to be connection-friendly, creating opportunities for dialogue and relationships that may grow into collaboration and mentorship over time.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -41,12 +41,11 @@ const AboutSection = () => {
                  </AccordionTrigger>
                 <AccordionContent className="text-foreground/80 leading-relaxed space-y-4">
                   <p>
-                    WiMN+AI is a NYU Abu Dhabi initiative founded by Dr. Dania Zantout to highlight the work and journeys of women mathematicians and scientists. It showcases successful role models and diverse career paths in mathematics and AI, and welcomes participants of all genders.
+                    WiMN+AI (Women in Math + AI Nights) features talks, panels, and community events that highlight the work and journeys of women mathematicians and scientists. Now in its fourth season, the series brings together speakers from academia, industry, and the arts, and invites participants of all genders.
                   </p>
                   <p>
-                    Through its talks and community events, WiMN+AI aims to make mathematics and AI more visible, inclusive, and vibrant on campus and beyond. The literature shows that women in STEM often find themselves as 'tokens' or 'solos' in their departments. WiMN+AI acknowledges this challenge and serves as a program to ensure women in mathematics feel welcomed, supported, and inspired. Now in its fourth season, the series features speakers from across academia, industry, and the arts.
+                    Through research spotlights and personal narrative, WiMN+AI makes the mathematics behind modern scientific and AI-driven work more visible, while building a campus culture where women in STEM feel supported rather than alone. As the series evolves, WiMN+AI is expanding to further bridge academia, education, and industry through panels and partner conversations, including AI curriculum and alignment with real-world practice.
                   </p>
-                
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

@@ -47,9 +47,9 @@ const HeroSection = () => {
 
       <div className="relative z-10 container mx-auto px-6 text-center pt-16">
         <h1 className="font-display text-5xl md:text-7xl font-bold mb-4 animate-slide-up text-foreground">
-          Women in Math
+          WiMN+AI
           <br />
-          <span style={{ color: '#86aeff' }}>+ AI Nights</span>
+          <span style={{ color: '#86aeff', fontSize: '0.6em' }}>Women in Math + AI Nights</span>
         </h1>
         <p className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-4 animate-slide-up delay-200">
           A Celebration of Diversity and Achievement

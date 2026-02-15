@@ -33,10 +33,9 @@ const WomenInMathAI = () => {
             <p className="text-sm text-white/50">
               © {new Date().getFullYear()} Women in Math + AI Nights. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 text-sm text-white/50">
-              <span>Organized by</span>
-              <span className="text-blue-400 font-medium">Dr. Dania Zantout</span>
-            </div>
+            <p className="text-sm text-white/50">
+              Founded and led by <span className="text-blue-400 font-medium">Dr. Dania Zantout</span>, Mathematics Program, Science Division, NYU Abu Dhabi.
+            </p>
           </div>
         </div>
       </footer>
