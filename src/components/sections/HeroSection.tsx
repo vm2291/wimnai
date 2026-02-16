@@ -58,7 +58,7 @@ const HeroSection = () => {
           Spotlighting women in mathematics and AI through talks, panels, and interdisciplinary "entanglements" while welcoming participants of all genders.
         </p>
         <div className="flex flex-wrap justify-center gap-4 animate-slide-up delay-400">
-          <button onClick={() => scrollTo("series")} className="px-8 py-3 rounded-lg bg-white text-[#112449] font-semibold hover:bg-white/70 transition-colors">
+          <button onClick={() => scrollTo("series")} className="px-8 py-3 rounded-lg bg-transparent border-2 border-white/40 hover:border-white/70 hover:bg-white/10 transition-all text-white font-medium">
             Explore the Series
           </button>
           <button onClick={() => scrollTo("speak-panel")} className="px-8 py-3 rounded-lg bg-transparent border-2 border-white/40 hover:border-white/70 hover:bg-white/10 transition-all text-white font-medium">
