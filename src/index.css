@@ -28,8 +28,7 @@
     --accent-foreground: 0 0% 100%;
 
     --navy: 220 62% 18%;
-    /* --blue-accent: 220 72% 70%; */
-    --blue-accent: 221 70% 44%; /* #2154c2 */
+    --blue-accent: 220 72% 70%;
     --gold-accent: 45 100% 55%;
 
     --destructive: 0 84.2% 60.2%;
@@ -67,28 +66,15 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: var(--font-sans);
-    font-size: 17px;
+    font-size: 18px;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
   }
 
-  p, li, span, td, th, label, a, div {
-    font-size: inherit;
-  }
-
-  p, li, span, td, th, label, a, div {
-    font-size: inherit;
-  }
-
   p {
-    font-size: 17px;
-    line-height: 1.7;
-  }
-
-  li {
-    font-size: 17px;
+    font-size: 1.125rem;
     line-height: 1.7;
   }
 }
@@ -103,7 +89,7 @@
   }
 
   .text-glow {
-    color: #2154c2;
+    color: hsl(var(--blue-accent));
   }
 
   .bg-glow {
@@ -123,7 +109,7 @@
   }
 
   .gradient-text {
-    color: #2154c2;
+    color: hsl(var(--blue-accent));
   }
 
   .glow-border {

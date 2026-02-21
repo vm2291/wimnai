@@ -97,12 +97,42 @@ const SeriesSection = () => {
 
         {/* 4.1 Upcoming */}
         <div id="upcoming" className="mb-20">
-          <h3 className="font-display text-2xl font-semibold text-foreground mb-6 text-center">Upcoming</h3>
-          <p className="text-foreground/70 max-w-lg mx-auto mb-8 text-center">
-            Stay tuned for announcements about our next speakers and events.
-          </p>
-          <div className="flex justify-center mb-10">
-            <img src={megaphoneGirl} alt="Stay tuned for announcements" className="w-80 md:w-[28rem] h-auto object-contain drop-shadow-lg" />
+          <h3 className="font-display text-2xl font-semibold text-foreground mb-8 text-center">Upcoming</h3>
+
+          {/* Event Card */}
+          <div className="max-w-3xl mx-auto bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden mb-10">
+            <div className="bg-[#112449] px-6 py-3 flex items-center gap-2">
+              <span className="text-white/70 text-sm font-medium uppercase tracking-wide">Season 4</span>
+              <span className="ml-auto inline-flex items-center gap-1.5 bg-green-500/20 text-green-300 text-xs font-semibold px-3 py-1 rounded-full border border-green-500/30">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse inline-block" />
+                Upcoming
+              </span>
+            </div>
+            <div className="p-6 md:p-8">
+              <h4 className="font-display text-2xl font-bold text-[#112449] mb-2">
+                Panel Discussion with Women Leaders
+              </h4>
+              <p className="text-gray-500 mb-6 leading-relaxed">
+                Join us for an inspiring panel discussion featuring women leaders in mathematics and AI, celebrating diverse paths and breakthrough contributions.
+              </p>
+              <div className="flex flex-wrap gap-4 mb-6">
+                <div className="flex items-center gap-2 bg-gray-50 rounded-lg px-4 py-2.5 border border-gray-200">
+                  <Calendar className="w-4 h-4 text-[#112449]" />
+                  <span className="text-[#112449] font-semibold text-sm">March 26, 2026</span>
+                </div>
+                <div className="flex items-center gap-2 bg-gray-50 rounded-lg px-4 py-2.5 border border-gray-200">
+                  <svg className="w-4 h-4 text-[#112449]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  <span className="text-[#112449] font-semibold text-sm">6:30 PM</span>
+                </div>
+                <div className="flex items-center gap-2 bg-gray-50 rounded-lg px-4 py-2.5 border border-gray-200">
+                  <MapPin className="w-4 h-4 text-[#112449]" />
+                  <span className="text-[#112449] font-semibold text-sm">A6 Humanities Building – 016, NYU Abu Dhabi</span>
+                </div>
+              </div>
+              <button onClick={() => scrollTo("subscribe")} className="px-6 py-3 rounded-lg bg-[#112449] text-white font-medium hover:bg-[#1a3563] transition-colors text-sm">
+                Opt in for updates & follow-ups
+              </button>
+            </div>
           </div>
 
           {/* Connection Nudge */}
@@ -110,12 +140,9 @@ const SeriesSection = () => {
             <p className="text-foreground/85 mb-2">
               Want to connect after an event? Opt in to receive the speaker's shared contact/links (when available) and community updates.
             </p>
-            <p className="text-foreground/70 mb-6">
+            <p className="text-foreground/70 mb-6 text-sm">
               Networking-friendly format: Many events include time for Q&A and informal conversation so participants can connect directly with speakers and each other.
             </p>
-            <button onClick={() => scrollTo("subscribe")} className="px-6 py-3 rounded-lg bg-[#112449] text-white font-medium hover:bg-[#1a3563] transition-colors">
-              Opt in for follow-ups
-            </button>
           </div>
         </div>
 
